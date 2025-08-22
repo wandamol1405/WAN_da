@@ -54,9 +54,7 @@ El presente Trabajo Práctico N°1 tiene como objetivo repasar y consolidar los 
 
 El trabajo explorará la clasificación de ondas en el espectro electromagnético según la ITU, analizará el fenómeno de la atenuación y su impacto en diferentes medios de transmisión como la telefonía celular, cables coaxiales y fibra óptica. Además, se examinarán los principios de la comunicación de datos digitales, incluyendo los tipos de transmisión y las técnicas de modulación adecuadas para medios inalámbricos, junto con el concepto de Bit Error Rate (BER). Finalmente, se utilizará el simulador Packet Tracer para construir y configurar una red simple, permitiendo la aplicación práctica de los conocimientos teóricos en el diseño y análisis de redes, y la exploración de la cobertura de la señal inalámbrica.
 
-**Palabras Clave**:
-
-# Marco teórico / Modelo / Metodología
+**Palabras Clave**: Red, Modulación, Demodulación, Señales, Packet Tracer, BER, Atentuación, Espectro Electromagnético.
 
 ## Marco teórico
 
@@ -82,10 +80,6 @@ Una señal de tiempo continuo es aquella definida para todo instante de tiempo. 
 
 Las señales de tiempo discreto se definen únicamente en instantes específicos o discretos de tiempo, representados matemáticamente como $x[n]$, donde $n$ es un número entero. Estas señales se obtienen a partir del proceso de muestreo de una señal de tiempo continuo. Según el teorema de muestreo de Nyquist, la frecuencia de muestreo debe ser al menos el doble de la máxima frecuencia presente en la señal original para evitar distorsiones conocidas como aliasing. Las señales discretas constituyen la base del procesamiento digital, ya que pueden almacenarse, manipularse y transmitirse en sistemas computacionales.
 
-## Modelo
-
-## Metodología
-
 ---
 
 ## Resultados
@@ -99,8 +93,8 @@ En el siguiente gráfico se ve una onda electromagnética propagándose en el ej
 - La distancia entre dos crestas consecutivas se marca como 60 mm.
 - Al ser una onda electromagnética, viaja a la velocidad de la luz ($c = 3·10^8 m/s$).
 
-![alt text](image.png)
-Figura X: [Onda Electromagnética](https://drive.google.com/drive/u/1/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
+![alt text](onda_electromagnetica.png)
+Figura 1.1: [Onda Electromagnética](https://drive.google.com/drive/u/1/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 ### b. ¿Qué frecuencia y longitud de onda tiene esta onda?
 
@@ -119,8 +113,8 @@ Por lo tanto, la onda tiene una longitud de onda de 60 mm y una frecuencia de 5 
 El espectro electromagnético se divide en regiones según la frecuencia. La señal calculada posee una frecuencia de 5 GHz, la cual pertenece a la región de las microondas, comprendida entre 300 MHz y 300 GHz. Según la clasificación de la Unión Internacional de Telecomunicaciones (UIT), esta frecuencia corresponde a la banda SHF (Super High Frequency), que abarca el rango de 3 GHz a 30 GHz.
 En conclusión, la onda de 5 GHz se encuentra en la región de microondas y dentro de la banda SHF.
 
-![alt text](image-3.png)
-Figura X: [Espectro electromagnetico](https://nuevaescuelamexicana.sep.gob.mx/contenido/coleccion/espectro-electromagnetico/)
+![alt text](espectro_electromagnetico.png)
+Figura 1.2: [Espectro electromagnetico](https://nuevaescuelamexicana.sep.gob.mx/contenido/coleccion/espectro-electromagnetico/)
 
 ### d. ¿Qué dispositivos para comunicaciones de datos operan en esta banda?
 
@@ -166,8 +160,9 @@ Siguiendo la misma lógica que en el ejemplo de la consigna, la forma de onda re
 
 Visualmente, se representa como niveles de tensión altos (“1”) y bajos (“0”) en cada ventana temporal de bit:
 
-![alt text](image-10.png)
-Figura X: Señal digital. Fuente propia
+![alt text](señal_digital.png)
+
+Figura 2.1: Señal digital. Fuente propia
 
 _Nota: en este ejercicio se representa únicamente la secuencia de bits, sin agregar los bits de inicio ni de parada propios de una trama UART real._
 
@@ -185,14 +180,17 @@ La transmisión de señales escalonadas en forma inalámbrica no es conveniente 
 
 #### a. Identificación de la técnica de modulación
 
-![alt text](image-2.png)
+![alt text](modulación_BPSK.png)
+
+Figura 3.1: [Modulación BPSK](https://drive.google.com/drive/u/1/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 La figura corresponde a una modulación por desplazamiento de fase binaria (BPSK, Binary Phase Shift Keying). En esta técnica, los bits se transmiten modificando la fase de la portadora: típicamente, un bit “0” se representa con fase de 0°, y un bit “1” con fase de 180°.
 
 #### b. Representación de la señal modulada
 
-![alt text](image-11.png)
-Figura X: Señal digital. Fuente propia
+![alt text](señal_digital_modulada.png)
+
+Figura 3.2: Señal digital modulada. Fuente propia
 
 #### c. Otras técnicas basadas en los mismos principios:
 
@@ -207,32 +205,57 @@ Figura X: Señal digital. Fuente propia
 El "bit error rate" **BER** es la tasa de errores en los bits recibidos, definida como la proporción de bits incorrectamente detectados respecto al total de bits transmitidos.
 De las técnicas mencionadas anteriormente BPSK ofrece la mejor robustez frente al ruido, ya que solo tiene dos posibles estados de fase claramente diferenciados.
 
-4.  Haciendo uso de el programa Cisco Packet Tracer colocamos un router configurado para operar con autenticacion WPA2-PSK con una frecuencia de 2,4GHz que se encuentra en la región de las microondas, específicamente en la Banda S del espectro electromagnético, que va de 2 a 4 GHz.
-    Posteriormente conectamos los siguientes dispositivos como se puede visualizar en la siguiente imagen:
+---
 
-    ![alt text](image-8.png)
+## 4. Red simple en Packet Tracer
 
-    A traves de pings comprobamos la conectividad de tanto la computadora de escritorio y notebook como se puede apreciar en las siguientes imagenes:
+Haciendo uso de el programa Cisco Packet Tracer colocamos un router configurado para operar con autenticacion WPA2-PSK con una frecuencia de 2,4GHz que se encuentra en la región de las microondas, específicamente en la Banda S del espectro electromagnético, que va de 2 a 4 GHz.
 
-    ![pc-laptop](image-12.png)
-    ![laptop-pc](image-13.png)
+Posteriormente conectamos los siguientes dispositivos como se puede visualizar en la siguiente imagen:
 
-    Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar:
+![alt text](conexión_dispositivos.png)
 
-    ![alt text](image-15.png)
+Figura 4.1: Conexión de dispositivos. Fuente propia
 
-    Con el dispositivo colocado por dentro hicimos la prueba de conexion con la PC principal:
+A traves de pings comprobamos la conectividad de tanto la computadora de escritorio y notebook como se puede apreciar en las siguientes imagenes:
 
-    ![lptop3](image-14.png)
+![pc-laptop](ping_PC_laptop.png)
 
-    Finalmente las conexiones en la vista logica quedarian de la siguiente manera:
+Figura 4.2: Resultados de realizar un ping desde PC a Laptop. Fuente propia
 
-    ![alt text](image-9.png)
+![laptop-pc](ping_laptop_PC.png)
+
+Figura 4.3: Resultados de realizar un ping desde Laptop a PC. Fuente propia
+
+Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar:
+
+![alt text](vista_fisica.png)
+
+Figura 4.4: Vista fisica de nuestra red. Fuente propia
+
+Con el dispositivo colocado por dentro hicimos la prueba de conexion con la PC principal:
+
+![lptop3](ping_laptop3_PC.png)
+
+Figura 4.5: Resultados de realizar un ping desde la Laptop3 a PC. Fuente propia
+
+Finalmente las conexiones en la vista logica quedarian de la siguiente manera:
+
+![alt text](vista_logica.png)
+Figura 4.6: Vista logica de la simulacion final. Fuente propia
 
 ---
 
 ## Discusión y Conclusiones
 
----
+El trabajo permitió afianzar los conceptos fundamentales de comunicaciones, comprendiendo cómo las ondas electromagnéticas, la modulación/demodulación y las señales de tiempo continuo y discreto se integran en los sistemas de transmisión modernos. Asimismo, se evidenció la importancia de factores como la atenuación y el BER en la calidad del enlace, así como la necesidad de elegir técnicas adecuadas según el medio.
+
+A nivel práctico, la simulación en Packet Tracer brindó una visión clara de cómo la teoría se aplica en redes reales, mostrando limitaciones y alcances de la transmisión inalámbrica. En reflexión, este ejercicio demuestra que comprender los principios básicos de la comunicación es esencial no solo para diseñar sistemas eficientes, sino también para resolver problemas cotidianos en el uso de la tecnología digital.
 
 ## Referencias
+
+- Cisco. [Packet Tracer](https://www.netacad.com/es/course/packet-tracer).
+
+- Curso Cisco CCNA: Introducción a las redes.
+
+- Kurose-Ross - Computer Networking A Top-Down Approach 7ed.
