@@ -100,6 +100,7 @@ En el siguiente gráfico se ve una onda electromagnética propagándose en el ej
 - Al ser una onda electromagnética, viaja a la velocidad de la luz ($c = 3·10^8 m/s$).
 
 ![alt text](image.png)
+Figura X: [Onda Electromagnética](https://drive.google.com/drive/u/1/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 ### b. ¿Qué frecuencia y longitud de onda tiene esta onda?
 
@@ -165,7 +166,8 @@ Siguiendo la misma lógica que en el ejemplo de la consigna, la forma de onda re
 
 Visualmente, se representa como niveles de tensión altos (“1”) y bajos (“0”) en cada ventana temporal de bit:
 
-![alt text](<Señal 'd'.png>)
+![alt text](image-10.png)
+Figura X: Señal digital. Fuente propia
 
 _Nota: en este ejercicio se representa únicamente la secuencia de bits, sin agregar los bits de inicio ni de parada propios de una trama UART real._
 
@@ -183,14 +185,14 @@ La transmisión de señales escalonadas en forma inalámbrica no es conveniente 
 
 #### a. Identificación de la técnica de modulación
 
-![alt text](SeñalConsigna3.png)
 ![alt text](image-2.png)
 
 La figura corresponde a una modulación por desplazamiento de fase binaria (BPSK, Binary Phase Shift Keying). En esta técnica, los bits se transmiten modificando la fase de la portadora: típicamente, un bit “0” se representa con fase de 0°, y un bit “1” con fase de 180°.
 
 #### b. Representación de la señal modulada
 
-![alt text](Consigna3b.png)
+![alt text](image-11.png)
+Figura X: Señal digital. Fuente propia
 
 #### c. Otras técnicas basadas en los mismos principios:
 
@@ -209,11 +211,13 @@ De las técnicas mencionadas anteriormente BPSK ofrece la mejor robustez frente 
     Posteriormente conectamos los siguientes dispositivos como se puede visualizar en la siguiente imagen:
     ![alt text](image-8.png)
     A traves de pings comprobamos la conectividad de tanto la computadora de escritorio y notebook como se puede apreciar en las siguientes imagenes:
-    ![terminal PC1](image-4.png)
-    ![terminal Laptop](image-5.png)
-    Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar
-    ![alt text](image-6.png)
-    ![alt text](image-7.png)
+    ![pc-laptop](image-12.png)
+    ![laptop-pc](image-13.png)
+    Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar:
+    ![alt text](image-15.png)
+    Con el dispositivo colocado por dentro hicimos la prueba de conexion con la PC principal:
+    ![lptop3](image-14.png)
+    Finalmente las conexiones en la vista logica quedarian de la siguiente manera:
     ![alt text](image-9.png)
 
 ---
