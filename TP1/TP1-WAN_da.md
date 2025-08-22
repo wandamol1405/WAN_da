@@ -2,7 +2,7 @@
 
 **Nombres**
 
-- _Fracisco Gomez Neimann_
+- _Francisco Gomez Neimann_
 
 - _Martina Juri_
 
