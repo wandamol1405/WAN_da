@@ -209,15 +209,24 @@ De las técnicas mencionadas anteriormente BPSK ofrece la mejor robustez frente 
 
 4.  Haciendo uso de el programa Cisco Packet Tracer colocamos un router configurado para operar con autenticacion WPA2-PSK con una frecuencia de 2,4GHz que se encuentra en la región de las microondas, específicamente en la Banda S del espectro electromagnético, que va de 2 a 4 GHz.
     Posteriormente conectamos los siguientes dispositivos como se puede visualizar en la siguiente imagen:
+
     ![alt text](image-8.png)
+
     A traves de pings comprobamos la conectividad de tanto la computadora de escritorio y notebook como se puede apreciar en las siguientes imagenes:
+
     ![pc-laptop](image-12.png)
     ![laptop-pc](image-13.png)
+
     Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar:
+
     ![alt text](image-15.png)
+
     Con el dispositivo colocado por dentro hicimos la prueba de conexion con la PC principal:
+
     ![lptop3](image-14.png)
+
     Finalmente las conexiones en la vista logica quedarian de la siguiente manera:
+
     ![alt text](image-9.png)
 
 ---
