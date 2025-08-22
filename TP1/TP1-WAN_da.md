@@ -94,6 +94,7 @@ En el siguiente gráfico se ve una onda electromagnética propagándose en el ej
 - Al ser una onda electromagnética, viaja a la velocidad de la luz ($c = 3·10^8 m/s$).
 
 ![alt text](onda_electromagnetica.png)
+
 Figura 1.1: [Onda Electromagnética](https://drive.google.com/drive/u/1/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 ### b. ¿Qué frecuencia y longitud de onda tiene esta onda?
@@ -242,6 +243,7 @@ Figura 4.5: Resultados de realizar un ping desde la Laptop3 a PC. Fuente propia
 Finalmente las conexiones en la vista logica quedarian de la siguiente manera:
 
 ![alt text](vista_logica.png)
+
 Figura 4.6: Vista logica de la simulacion final. Fuente propia
 
 ---
