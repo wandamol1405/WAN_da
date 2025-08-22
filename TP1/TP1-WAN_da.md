@@ -34,8 +34,6 @@ Santiago M. Henn
 
 ### Información de los autores
 
-Somos re copados, cracks totales
-
 - **Información de contacto**:
 
   _francisco.gomez.neimann@mi.unc.edu.ar_
@@ -92,48 +90,57 @@ Las señales de tiempo discreto se definen únicamente en instantes específicos
 
 ## Resultados
 
-1.  a. Análisis del gráfico
+## 1. Onda electromagnética
 
-    En el siguiente gráfico se ve una onda sinusoidal propagándose en el eje de distancia [mm]. La distancia entre dos crestas consecutivas se marca como 60 mm, lo que corresponde a la longitud de onda (𝜆). Además, la onda viaja a la velocidad de la luz ($c = 3·10^8 m/s$).
+### a. Análisis del gráfico
 
-    ![alt text](image.png)
+En el siguiente gráfico se ve una onda electromagnética propagándose en el eje de distancia [mm]. Es posible ver que:
 
-    b. ¿Qué frecuencia y longitud de onda tiene esta onda?
+- La distancia entre dos crestas consecutivas se marca como 60 mm.
+- Al ser una onda electromagnética, viaja a la velocidad de la luz ($c = 3·10^8 m/s$).
 
-    En la figura se observa que la distancia entre dos crestas consecutivas es de 60 mm, lo cual corresponde a la longitud de onda (𝜆). Es decir:
+![alt text](image.png)
 
-    $$λ=60 mm=0.06 m$$
+### b. ¿Qué frecuencia y longitud de onda tiene esta onda?
 
-    Dado que la onda se propaga a la velocidad de la luz en el vacío ($c=3x10^8 m/s$), se puede calcular la frecuencia como:
+Como fue mencionado anteriormente, la distancia entre dos crestas consecutivas es de 60 mm, lo cual corresponde a la longitud de onda (𝜆). Es decir:
 
-    $$f=λc​=0.063×108​≈5×109 Hz=5 GHz$$
+$$λ=60 mm=0.06 m$$
 
-    Por lo tanto, la onda tiene una longitud de onda de 60 mm y una frecuencia de 5 GHz.
+Dado que la onda se propaga a la velocidad de la luz en el vacío ($c=3x10^8 m/s$), se puede calcular la frecuencia como:
 
-    c. ¿En qué región y banda del espectro electromagnético opera esta onda?
+$$f=\frac{c}{𝜆}=\frac{3x10^8m/s}{0.06m}=5.10^9Hz=5GHz$$
 
-    El espectro electromagnético se divide en regiones según la frecuencia. La señal calculada posee una frecuencia de 5 GHz, la cual pertenece a la región de las microondas, comprendida entre 300 MHz y 300 GHz. Según la clasificación de la Unión Internacional de Telecomunicaciones (UIT), esta frecuencia corresponde a la banda SHF (Super High Frequency), que abarca el rango de 3 GHz a 30 GHz.
-    En conclusión, la onda de 5 GHz se encuentra en la región de microondas y dentro de la banda SHF.
+Por lo tanto, la onda tiene una longitud de onda de 60 mm y una frecuencia de 5 GHz.
 
-    d. ¿Qué dispositivos para comunicaciones de datos operan en esta banda?
+### c. ¿En qué región y banda del espectro electromagnético opera esta onda?
 
-    La banda de 5 GHz es utilizada ampliamente en sistemas de comunicaciones modernas. Un caso muy relevante es el de las redes inalámbricas Wi-Fi, en particular los estándares IEEE 802.11a, 802.11n, 802.11ac y 802.11ax, que operan en este rango de frecuencias. Además, también se utilizan en enlaces de microondas punto a punto, así como en algunos sistemas de radar.
-    Un ejemplo concreto es el Wi-Fi de 5 GHz, presente en routers domésticos y empresariales, el cual permite conexiones de alta velocidad con menor interferencia respecto a la banda de 2.4 GHz, aunque con un alcance más reducido.
+El espectro electromagnético se divide en regiones según la frecuencia. La señal calculada posee una frecuencia de 5 GHz, la cual pertenece a la región de las microondas, comprendida entre 300 MHz y 300 GHz. Según la clasificación de la Unión Internacional de Telecomunicaciones (UIT), esta frecuencia corresponde a la banda SHF (Super High Frequency), que abarca el rango de 3 GHz a 30 GHz.
+En conclusión, la onda de 5 GHz se encuentra en la región de microondas y dentro de la banda SHF.
 
-    e. ¿Qué fenómeno representa la línea de trazos roja?
+![alt text](image-3.png)
+Figura X: [Espectro electromagnetico](https://nuevaescuelamexicana.sep.gob.mx/contenido/coleccion/espectro-electromagnetico/)
 
-    La línea de trazos rojos en la figura representa el fenómeno de la atenuación de la señal, es decir, la pérdida progresiva de intensidad conforme la onda se propaga en el espacio. Esto ocurre debido a que la energía de la onda se dispersa y, en ciertos medios, se disipa en forma de calor o interacciones con obstáculos. En el gráfico, la línea roja ilustra cómo la amplitud efectiva de la señal decrece con la distancia recorrida.
+### d. ¿Qué dispositivos para comunicaciones de datos operan en esta banda?
 
-    f. ¿Este fenómeno afecta al dispositivo mencionado?
+La banda de 5 GHz es utilizada ampliamente en sistemas de comunicaciones modernas. Un caso muy relevante es el de las redes inalámbricas Wi-Fi, en particular los estándares IEEE 802.11a, 802.11n, 802.11ac y 802.11ax, que operan en este rango de frecuencias. Además, también se utilizan en enlaces de microondas punto a punto, así como en algunos sistemas de radar.
+Un ejemplo concreto es el Wi-Fi de 5 GHz, presente en routers domésticos y empresariales, el cual permite conexiones de alta velocidad con menor interferencia respecto a la banda de 2.4 GHz, aunque con un alcance más reducido.
 
-    Sí, la atenuación afecta directamente a los dispositivos que operan en la banda de 5 GHz, como los routers Wi-Fi. En la práctica cotidiana, esto se percibe en que la señal de Wi-Fi de 5 GHz tiene menor alcance y pierde potencia rápidamente al atravesar paredes u obstáculos, en comparación con la señal de 2.4 GHz. Por ello, es habitual notar que la conexión inalámbrica se debilita o incluso se pierde en habitaciones alejadas del router.
+### e. ¿Qué fenómeno representa la línea de trazos roja?
 
-    g. ¿Afecta este fenómeno a diferentes sistemas de transmisión?
-    i) Telefonía celular: Sí, las transmisiones celulares también sufren atenuación. Por ello, la calidad de la señal disminuye al aumentar la distancia respecto a la antena base o al estar dentro de edificios, lo que provoca llamadas interrumpidas o menor velocidad de datos.
+La línea de trazos rojos en la figura representa el fenómeno de la atenuación de la señal, es decir, la pérdida progresiva de intensidad conforme la onda se propaga en el espacio. Esto ocurre debido a que la energía de la onda se dispersa y, en ciertos medios, se disipa en forma de calor o interacciones con obstáculos. En el gráfico, la línea roja ilustra cómo la amplitud efectiva de la señal decrece con la distancia recorrida.
 
-        ii) Transmisiones por cable coaxial: En este caso, la atenuación también está presente, aunque en menor medida que en el aire. El efecto depende de la longitud del cable y de la frecuencia de la señal transmitida. Por este motivo, en redes de televisión por cable e internet se utilizan amplificadores para compensar las pérdidas en tramos largos.
+### f. ¿Este fenómeno afecta al dispositivo mencionado?
 
-        iii) Transmisiones por fibra óptica: La fibra óptica presenta un nivel de atenuación muy bajo en comparación con los otros medios, lo que permite transmitir señales a largas distancias con mínima pérdida. Sin embargo, en enlaces muy extensos todavía es necesario utilizar repetidores ópticos para regenerar la señal y evitar degradaciones.
+Sí, la atenuación afecta directamente a los dispositivos que operan en la banda de 5 GHz, como los routers Wi-Fi. En la práctica cotidiana, esto se percibe en que la señal de Wi-Fi de 5 GHz tiene menor alcance y pierde potencia rápidamente al atravesar paredes u obstáculos, en comparación con la señal de 2.4 GHz. Por ello, es habitual notar que la conexión inalámbrica se debilita o incluso se pierde en habitaciones alejadas del router.
+
+### g. ¿Afecta este fenómeno a diferentes sistemas de transmisión?
+
+i) **Telefonía celular:** Las transmisiones celulares también sufren atenuación. Por ello, la calidad de la señal disminuye al aumentar la distancia respecto a la antena base o al estar dentro de edificios, lo que provoca llamadas interrumpidas o menor velocidad de datos.
+
+ii) **Transmisiones por cable coaxial:** En este caso, la atenuación también está presente, aunque en menor medida que en el aire. El efecto depende de la longitud del cable y de la frecuencia de la señal transmitida. Por este motivo, en redes de televisión por cable e internet se utilizan amplificadores para compensar las pérdidas en tramos largos.
+
+iii) **Transmisiones por fibra óptica:** La fibra óptica presenta un nivel de atenuación muy bajo en comparación con los otros medios, lo que permite transmitir señales a largas distancias con mínima pérdida. Sin embargo, en enlaces muy extensos todavía es necesario utilizar repetidores ópticos para regenerar la señal y evitar degradaciones.
 
 ## 2. Análisis del sistema de transmisión
 
@@ -158,8 +165,7 @@ Siguiendo la misma lógica que en el ejemplo de la consigna, la forma de onda re
 
 Visualmente, se representa como niveles de tensión altos (“1”) y bajos (“0”) en cada ventana temporal de bit:
 
-▁ ▔ ▔ ▁ ▁ ▔ ▁ ▁  
-(bajo, alto, alto, bajo, bajo, alto, bajo, bajo)
+![alt text](<Señal 'd'.png>)
 
 _Nota: en este ejercicio se representa únicamente la secuencia de bits, sin agregar los bits de inicio ni de parada propios de una trama UART real._
 
@@ -169,12 +175,51 @@ Debido a que los flancos de subida y bajada de la señal no son instantáneos (p
 De esta manera se evita que el receptor lea valores intermedios durante la transición.
 En términos de marcas temporales, si cada ventana de bit se abre con un pulso de reloj, la medición confiable corresponde a la mitad de cada período de bit (T0, T1, T2… en sus posiciones centrales).
 
-3. La transmisión de señales escalonadas en forma inalámbrica no es conveniente debido a que dichas señales presentan transiciones abruptas en el dominio temporal. Estas transiciones contienen una gran cantidad de componentes de alta frecuencia cuando se analizan en el dominio espectral. En consecuencia, una señal escalonada ocuparía un ancho de banda muy amplio y sería ineficiente desde el punto de vista de la transmisión. Además, la radiación de altas frecuencias incrementa la probabilidad de interferencias y atenuaciones selectivas en el canal, dificultando la recuperación confiable de los datos en el receptor. Para solucionar este problema, se recurre a técnicas de modulación, que permiten representar la información digital sobre una portadora sinusoidal de frecuencia mucho más alta, ajustando parámetros como amplitud, frecuencia o fase.
+---
 
-![alt text](Señal_consigna3.png)
+## 3. Motivos por los cuales no se transmiten señales escalonadas en forma inalámbrica y técnicas de modulación
 
-a) La figura corresponde a una modulación por desplazamiento de fase binaria (BPSK, Binary Phase Shift Keying). En esta técnica, los bits se transmiten modificando la fase de la portadora: típicamente, un bit “0” se representa con fase de 0°, y un bit “1” con fase de 180°.
+La transmisión de señales escalonadas en forma inalámbrica no es conveniente debido a que dichas señales presentan transiciones abruptas en el dominio temporal. Estas transiciones contienen una gran cantidad de componentes de alta frecuencia cuando se analizan en el dominio espectral. En consecuencia, una señal escalonada ocuparía un ancho de banda muy amplio y sería ineficiente desde el punto de vista de la transmisión. Además, la radiación de altas frecuencias incrementa la probabilidad de interferencias y atenuaciones selectivas en el canal, dificultando la recuperación confiable de los datos en el receptor. Para solucionar este problema, se recurre a técnicas de modulación, que permiten representar la información digital sobre una portadora sinusoidal de frecuencia mucho más alta, ajustando parámetros como amplitud, frecuencia o fase.
+
+#### a. Identificación de la técnica de modulación
+
+![alt text](SeñalConsigna3.png)
+![alt text](image-2.png)
+
+La figura corresponde a una modulación por desplazamiento de fase binaria (BPSK, Binary Phase Shift Keying). En esta técnica, los bits se transmiten modificando la fase de la portadora: típicamente, un bit “0” se representa con fase de 0°, y un bit “1” con fase de 180°.
+
+#### b. Representación de la señal modulada
+
+![alt text](Consigna3b.png)
+
+#### c. Otras técnicas basadas en los mismos principios:
+
+- **QPSK (Quadrature Phase Shift Keying)**: utiliza cuatro fases distintas (0°, 90°, 180°, 270°) para transmitir 2 bits por símbolo, aumentando la eficiencia espectral.
+
+- **8-PSK, 16-PSK, etc.**: generalizaciones que emplean más fases distintas para transmitir mayor cantidad de bits por símbolo.
+
+- **QAM (Quadrature Amplitude Modulation)**: combina variaciones de fase y amplitud, permitiendo transmitir aún más bits por símbolo.
+
+#### d. ¿Que es el Bit Error Rate? ¿Cual de las técnicas presentadas anteriormente tiene mejores prestaciones?
+
+El "bit error rate" **BER** es la tasa de errores en los bits recibidos, definida como la proporción de bits incorrectamente detectados respecto al total de bits transmitidos.
+De las técnicas mencionadas anteriormente BPSK ofrece la mejor robustez frente al ruido, ya que solo tiene dos posibles estados de fase claramente diferenciados.
+
+4.  Haciendo uso de el programa Cisco Packet Tracer colocamos un router configurado para operar con autenticacion WPA2-PSK con una frecuencia de 2,4GHz que se encuentra en la región de las microondas, específicamente en la Banda S del espectro electromagnético, que va de 2 a 4 GHz.
+    Posteriormente conectamos los siguientes dispositivos como se puede visualizar en la siguiente imagen:
+    ![alt text](image-8.png)
+    A traves de pings comprobamos la conectividad de tanto la computadora de escritorio y notebook como se puede apreciar en las siguientes imagenes:
+    ![terminal PC1](image-4.png)
+    ![terminal Laptop](image-5.png)
+    Para testear los limites de radio de nuestra red wifi usamos la vista "física" del programa y colocamos dos nuevos dispositivos uno por dentro y el otro por fuera del radio maximo de la red generada por nuestro router e intentamos conectar
+    ![alt text](image-6.png)
+    ![alt text](image-7.png)
+    ![alt text](image-9.png)
 
 ---
 
-4.  Opera en 2.437GHz
+## Discusión y Conclusiones
+
+---
+
+## Referencias
