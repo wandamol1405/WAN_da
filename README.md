@@ -1,6 +1,6 @@
 # 📡 Comunicaciones de Datos
 
-Este repositorio contiene los trabajos prácticos de la materia Comunicaciones de Datos, realizados como parte de la cursada de la carrera de Ingeniería.
+Este repositorio contiene los trabajos prácticos de la materia Comunicaciones de Datos, realizados como parte de la cursada de la carrera de Ingeniería en Computación.
 
 ## 📂 Contenido
 
@@ -51,5 +51,6 @@ El objetivo de este repositorio es documentar y centralizar los ejercicios prác
 2025
 
 ### Universidad / Facultad
+
 
 Facultad de Ciencias Exactas, Físicas y Naturales - Universidad Nacional de Córdoba
