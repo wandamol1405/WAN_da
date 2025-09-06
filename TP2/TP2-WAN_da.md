@@ -45,3 +45,29 @@ Santiago M. Henn
   _mmoran@mi.unc.edu.ar_
 
 ---
+## Resumen
+El Trabajo Práctico N°2 tiene como objetivo consolidar y expandir los conocimientos en las capas más fundamentales de las redes de computadoras: la Capa Física y la Capa de Enlace de Datos. Además de los conceptos teóricos, el trabajo introduce una herramienta práctica esencial para el análisis de redes, WireShark, y fomenta la familiarización con su uso.
+
+## Introduccion
+
+**Palabras Clave**
+
+## Marco teórico
+
+---
+
+## Resultados
+### 1. Fenómeno físico representado y sus características
+a. El fenómeno representado en la figura es el efecto Doppler, que consiste en la variación aparente de la frecuencia de la señal debido al movimiento relativo entre el emisor y el receptor.
+
+![alt text](image.png)
+
+#### Características del Efecto Doppler
+- **Sentido del movimiento:** Si el emisor y el receptor se acercan, la frecuencia recibida aumenta, comprimiendo las ondas. Por el contrario, si se alejan, la frecuencia recibida disminuye, expandiendo las ondas.
+- **Ocurrencia en comunicaciones inalámbricas:** ocurren en sistemas de radio, celular, WiFi y comunicaciones satelitales debido al movimiento de satelites, aviones, vehiculos o usuarios.
+- **Magnitud de desplazamiento:** depende de la velocidad relatica entre transmisor y receptor y de la freceucnia de la portadora. A mayor frecuencia, mayor impactor de Doppler.
+
+
+
+
+### 2. 
