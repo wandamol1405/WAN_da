@@ -169,7 +169,7 @@ Relación con BER (Bit Error Rate):
 - Si la SNR disminuye, la probabilidad de que los bits se interpreten mal aumenta → BER alta.
 - Por lo tanto, SNR y BER están directamente relacionados: mayor SNR → menor BER y viceversa.
 
-![alt text](ber-ser.png)
+![alt text](ber_ser.png)
 
 
 ### 4. Reflexiones finales y conclusiones
