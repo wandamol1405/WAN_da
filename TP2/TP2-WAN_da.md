@@ -108,6 +108,7 @@ Sus características principales son:
 - Puede dificultar la demodulación de la señal y aumentar la tasa de error, por lo que los sistemas aplican compensación de Doppler para garantizar la correcta recepción.
 
 ![alt text](efecto_doppler.png)
+
 Figura 1.1: [Efecto Doppler](https://drive.google.com/drive/u/0/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 b. Los tipos de transmisión más afectados son:
@@ -133,6 +134,7 @@ a. El fenomeno representado en la figura es la interferencia o ruido en la seña
 - **Desvanecimiento (fading):** Variaciones en la amplitud y fase de la señal debido a obstáculos, reflexión o dispersión multipath.
 
 ![alt text](ruido.png)
+
 Figura 2.1: [Ruido en transminsión de señal](https://drive.google.com/drive/u/0/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 #### Características principales del fenómeno
@@ -168,4 +170,5 @@ Relación con BER (Bit Error Rate):
 - Por lo tanto, SNR y BER están directamente relacionados: mayor SNR → menor BER y viceversa.
 
 ![alt text](ber_ser.png)
+
 Figura 2.2: Relación BER - SER
