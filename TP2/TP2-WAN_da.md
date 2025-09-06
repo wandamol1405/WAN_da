@@ -1,4 +1,4 @@
-# Comunicaciones 101: Repaso de fundamentos esenciales e introducción a Packet Tracer
+# Más conceptos fundamentales de capa física y capa de enlace de datos.
 
 **Nombres**
 
