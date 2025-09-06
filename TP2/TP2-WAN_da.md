@@ -57,7 +57,7 @@ El Trabajo Práctico N°2 tiene como objetivo consolidar y expandir los conocimi
 ---
 
 ## Resultados
-### 1. Fenómeno físico representado y sus características
+### 1. Fenómeno físico representado y sus características (a)
 a. El fenómeno representado en la figura es el efecto Doppler, que consiste en la variación aparente de la frecuencia de la señal debido al movimiento relativo entre el emisor y el receptor.
 
 ![alt text](image.png)
@@ -70,4 +70,45 @@ a. El fenómeno representado en la figura es el efecto Doppler, que consiste en 
 
 
 
-### 2. 
+### 2. Fenómeno físico representado y sus características (b)
+
+a. El fenomeno representado en la figura es la interferencia o ruido en la señal durante la transmisión. La señal inicialmente limpia se ve distorsionada en cierto tramo (ruido o perturbación). Esto puede deberse a fenómenos como:
+
+- **Ruido electromagnético:** Introducido por otras fuentes de energía eléctrica o radiación.
+- **Desvanecimiento (fading):** Variaciones en la amplitud y fase de la señal debido a obstáculos, reflexión o dispersión multipath.
+
+![alt text](image-1.png)
+
+#### Características principales del fenómeno
+
+- Se manifiesta como distorsión o “picos” en la señal original.
+- Es aleatorio y puede variar en el tiempo y espacio.
+- Afecta la calidad de la señal recibida y puede degradar la información transmitida.
+
+En la figura, el operario con la pistola representa la introducción de ruido o interferencia durante la transmisión.
+
+b. Bandas de transmisión y susceptibilidad
+
+Recordando las bandas vistas en TP01:
+
+- **Baja frecuencia (LF, MF, HF):** Menos afectadas por desvanecimiento rápido; penetran obstáculos mejor.
+- **Alta frecuencia (VHF, UHF, SHF, EHF):** Más susceptibles a interferencias y desvanecimiento multipath, especialmente microondas y comunicaciones móviles.
+
+#### Conclusión:
+Afecta más: Transmisiones de alta frecuencia (por ejemplo, celular, Wi-Fi, microondas).
+Más resilientes: Transmisiones de baja frecuencia, por ejemplo AM de radio, que pueden atravesar obstáculos con menor degradación.
+
+c. SNR y relación con BER
+
+**SNR (Signal-to-Noise Ratio):** Es la relación entre la potencia de la señal útil y la potencia del ruido.
+- Se mide en decibelios (dB).
+- Una SNR alta indica que la señal es mucho más fuerte que el ruido → mejor calidad de transmisión.
+- Una SNR baja indica que el ruido domina → mayor probabilidad de errores.
+
+**BER:** Proporción de bits erróneos recibidos respecto a los transmitidos.
+
+Relación con BER (Bit Error Rate):
+- Si la SNR disminuye, la probabilidad de que los bits se interpreten mal aumenta → BER alta.
+- Por lo tanto, SNR y BER están directamente relacionados: mayor SNR → menor BER y viceversa.
+
+![alt text](image-2.png)
