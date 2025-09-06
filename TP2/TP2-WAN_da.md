@@ -46,29 +46,85 @@ Santiago M. Henn
 
 ---
 ## Resumen
-El Trabajo Práctico N°2 tiene como objetivo consolidar y expandir los conocimientos en las capas más fundamentales de las redes de computadoras: la Capa Física y la Capa de Enlace de Datos. Además de los conceptos teóricos, el trabajo introduce una herramienta práctica esencial para el análisis de redes, WireShark, y fomenta la familiarización con su uso.
 
-## Introduccion
+El trabajo práctico N°2 tiene como objetivo consolidar y expandir los conocimientos en las capas más fundamentales de las redes de computadoras: la Capa Física y la Capa de Enlace de Datos. Además de los conceptos teóricos, el trabajo introduce una herramienta práctica esencial para el análisis de redes, WireShark, y fomenta la familiarización con su uso.
+
+## Introducción
+
+En el presente trabajo práctico se abordan conceptos fundamentales relacionados con la capa física y la capa de enlace de datos dentro del modelo de referencia OSI. Se busca comprender fenómenos físicos que afectan la transmisión de señales, tales como el efecto Doppler, la atenuación y la relación señal-ruido, y analizar cómo influyen en la calidad de la comunicación.
+
+Asimismo, se introduce la herramienta Wireshark, un analizador de protocolos que permite observar y estudiar el tráfico de red en tiempo real. De este modo, los ejercicios propuestos integran tanto el estudio teórico de los fenómenos de transmisión como la aplicación práctica en el análisis de tramas de datos y protocolos de red.
 
 **Palabras Clave**
 
 ## Marco teórico
 
+### Capa Física
+
+La capa física del modelo OSI se encarga de la transmisión de bits a través de un medio físico, ya sea guiado (cableado) o no guiado (inalámbrico). Sus funciones incluyen la codificación de la señal, la modulación, la sincronización y la definición de las características eléctricas, ópticas o radioeléctricas del medio. Dentro de esta capa se analizan fenómenos como:
+
+- **Efecto Doppler**: variación aparente de la frecuencia de una onda debido al movimiento relativo entre transmisor y receptor. Tiene especial impacto en comunicaciones móviles y satelitales.
+
+- **Atenuación**: pérdida de potencia de la señal a medida que se propaga por el medio.
+
+- **Ruido e interferencia electromagnética**: perturbaciones externas que afectan la calidad de la señal.
+
+- **Relación Señal-Ruido (SNR)**: indicador que mide la proporción entre la potencia de la señal y el ruido presente en el canal.
+
+### Capa de Enlace de Datos
+
+La capa de enlace se sitúa sobre la capa física y tiene como función principal garantizar una comunicación libre de errores entre nodos adyacentes. Sus principales tareas son:
+
+- *Encapsulación de tramas*: organización de la información en bloques con cabecera y control de errores.
+
+- *Detección y corrección de errores*: a través de mecanismos como CRC o bits de paridad.
+
+- *Control de flujo*: coordinación entre emisor y receptor para evitar pérdidas de datos.
+
+- *Direccionamiento físico*: mediante el uso de direcciones MAC únicas para cada dispositivo.
+
+### Wireshark
+
+Wireshark es una herramienta de software que permite capturar, visualizar y analizar paquetes de red en tiempo real. Es fundamental para estudiar cómo se estructuran las tramas, qué protocolos intervienen y cómo se comporta el tráfico en diferentes escenarios. Entre sus utilidades se encuentran:
+
+- Filtrado de paquetes por direcciones IP o protocolos.
+
+- Visualización de tramas Ethernet, IP y TCP/UDP.
+
+- Exportación y documentación de capturas para su análisis posterior.
 ---
 
 ## Resultados
 ### 1. Fenómeno físico representado y sus características (a)
-a. El fenómeno representado en la figura es el efecto Doppler, que consiste en la variación aparente de la frecuencia de la señal debido al movimiento relativo entre el emisor y el receptor.
+a. El fenómeno representado es el efecto Doppler, que consiste en la variación aparente de la frecuencia de una onda debido al movimiento relativo entre el transmisor y el receptor.
+Sus características principales son:
 
-![alt text](image.png)
+- La frecuencia recibida aumenta cuando emisor y receptor se acercan, y disminuye cuando se alejan.
 
-#### Características del Efecto Doppler
-- **Sentido del movimiento:** Si el emisor y el receptor se acercan, la frecuencia recibida aumenta, comprimiendo las ondas. Por el contrario, si se alejan, la frecuencia recibida disminuye, expandiendo las ondas.
-- **Ocurrencia en comunicaciones inalámbricas:** ocurren en sistemas de radio, celular, WiFi y comunicaciones satelitales debido al movimiento de satelites, aviones, vehiculos o usuarios.
-- **Magnitud de desplazamiento:** depende de la velocidad relatica entre transmisor y receptor y de la freceucnia de la portadora. A mayor frecuencia, mayor impactor de Doppler.
+- La magnitud del desplazamiento depende de la velocidad relativa y de la frecuencia de la portadora (a mayor frecuencia, mayor efecto Doppler).
 
+- Tiene especial relevancia en comunicaciones satelitales y sistemas móviles, donde hay desplazamiento constante.
 
+- Puede dificultar la demodulación de la señal y aumentar la tasa de error, por lo que los sistemas aplican compensación de Doppler para garantizar la correcta recepción.
 
+![alt text](efecto_doppler.png)
+
+Figura 1.1: [Efecto Doppler](https://drive.google.com/drive/u/0/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
+
+b. Los tipos de transmisión más afectados son:
+- Transmisiones analógicas y de banda angosta, donde un pqeueño cambio de frecuencia altera significativamente la señal.
+- Comunicaciones de alta freceucnia, ya que el desplazamiento Dopple es proporcional a la frecuencia portadora.
+- Sistemas moviles terrestres: telefonía celular, enlaces entre estaciones base y dsipositivos en movimiento rápido.
+
+Las transmisiones mas resilientes son: 
+- Señales digitales de banda ancha (OFDM, como LTE o WiFi), que toleran mejor los pequeños desplazamientos de frecuencia.
+- Fibra óptica: no se ve afectado al ser un medio guiado.
+- Satelites geoestacionarios, ya que suposicion relativa respecto a la Tierra es fija, minimizando el Doppler.
+
+c. Se recomienda utilizar el modo avion cuando se esta a bordo de un avión debido a la interferencia electromagnética emitida por los celulares. Emiten en multiples bandas de freceuncia que pueden afectar la instrumentación de navegacion y comunicación del avión. Ademas, a gran altura, el celular intenta conectarse a varias antenas terrestres a la vez, lo que incrementa la potencia de transmision y el riesgo de interferencia. 
+En relación con el efecto Doppler, existe un vínculo entre la restricción de utilizar el celular en el avión y éste fenómeno. El movimiento de un avión a alta velocidad genera un desplazamiento Doppler significativo en las señales del celulcar, lo que puede producir errores de frecuencia e inestabilidad en las comunicacion. Esto, sumado a la posibilidad de interferencia con los sistemas de a bordo, refuerza la restricción.
+
+---
 
 ### 2. Fenómeno físico representado y sus características (b)
 
@@ -77,7 +133,9 @@ a. El fenomeno representado en la figura es la interferencia o ruido en la seña
 - **Ruido electromagnético:** Introducido por otras fuentes de energía eléctrica o radiación.
 - **Desvanecimiento (fading):** Variaciones en la amplitud y fase de la señal debido a obstáculos, reflexión o dispersión multipath.
 
-![alt text](image-1.png)
+![alt text](ruido.png)
+
+Figura 2.1: [Ruido en transminsión de señal](https://drive.google.com/drive/u/0/folders/1VmlirVlTplG6luMhQwEFXqqF9nYieI9d)
 
 #### Características principales del fenómeno
 
