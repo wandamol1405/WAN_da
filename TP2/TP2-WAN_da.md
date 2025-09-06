@@ -169,6 +169,25 @@ Relación con BER (Bit Error Rate):
 - Si la SNR disminuye, la probabilidad de que los bits se interpreten mal aumenta → BER alta.
 - Por lo tanto, SNR y BER están directamente relacionados: mayor SNR → menor BER y viceversa.
 
-![alt text](ber_ser.png)
+![alt text](image-2.png)
 
-Figura 2.2: Relación BER - SER
+
+### 4. Reflexiones finales y conclusiones
+
+El análisis con Wireshark mostró que la dirección MAC funciona como un identificador único de la tarjeta de red y, aunque no se transmite a través de Internet, sí es visible en la red local. Esto implica que otros equipos o el propio router pueden reconocer y seguir la actividad de un dispositivo, e incluso identificar su fabricante a partir del **OUI**. Por lo tanto, la privacidad del usuario dentro de una LAN es limitada: la MAC permite rastrear y asociar la presencia del dispositivo en el tiempo, lo que representa un punto crítico en la trazabilidad y en la exposición de datos en entornos compartidos.
+
+*Similitudes entre el IMEI y la dirección MAC.*
+
+El **IMEI** (International Mobile Equipment Identity) es un número único de 15 dígitos asignado a cada dispositivo móvil. Se utiliza para identificar y autenticar el dispositivo en la red móvil. Es crucial para la seguridad, ya que permite a los operadores bloquear dispositivos robados o perdidos, evitando su uso en la red.
+
+La **dirección MAC** (Media Access Control) es también un identificador único, pero aplicado a las interfaces de red (Wi-Fi, Bluetooth, Ethernet). Está grabada en la tarjeta de red del dispositivo y sirve para que las redes lo reconozcan dentro de una LAN o en conexiones inalámbricas.
+
+Son similares en varios aspectos:
+- Ambos son identificadores únicos a nivel de hardware.
+- Se asignan por el fabricante y no cambian al reiniciar o reinstalar software.
+- Permiten identificar y controlar el acceso de un dispositivo a una red (IMEI en redes móviles; MAC en redes locales).
+
+
+*¿Una VPN oculta la dirección MAC del dispositivo?*
+
+Una **VPN** no oculta la dirección **MAC** del dispositivo, porque la MAC es un identificador físico grabado en la tarjeta de red y solo se utiliza dentro de la red local para que el router sepa a qué equipo entregar los datos, lo que realmente hace la VPN es cifrar el tráfico y reemplazar la dirección IP pública por la del servidor remoto, de modo que los sitios web o servicios externos solo ven esa IP de la VPN y no la de la conexión real, mientras que la MAC sigue siendo visible únicamente para la red local o el proveedor de Internet.
