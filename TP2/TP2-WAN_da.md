@@ -205,6 +205,30 @@ El tamaño mínimo de trama de Ethernet es de 64 bytes, y el máximo es de 1518 
 
 ![alt text](tramadedatos.png)
 
+Las diferencias principales entre Ethernet, Fast Ethernet y Gigabit Ethernet radican en la velocidad de transmisión de datos, la cual ha evolucionado significativamente a lo largo del tiempo. 🚀
+
+Ethernet (10BASE-T)
+Velocidad: 10 Mbps (megabits por segundo).
+
+Contexto: Fue la tecnología original y estándar para las redes de área local (LAN) a principios de la década de 1990.
+
+Características: Utiliza cables de par trenzado (Cat 3 o superior) y tiene una velocidad muy limitada para los estándares actuales. Aunque ya no se usa comúnmente para redes modernas, sentó las bases para los estándares posteriores.
+
+Fast Ethernet (100BASE-T)
+Velocidad: 100 Mbps.
+
+Contexto: Surgió a mediados de la década de 1990 como una respuesta a la creciente necesidad de mayor ancho de banda en las redes.
+
+Características: Es diez veces más rápido que el Ethernet original y se convirtió en el estándar de facto para las redes de escritorio durante muchos años. Utiliza cables de par trenzado de categoría 5 (Cat 5) o superior.
+
+Gigabit Ethernet (1000BASE-T)
+Velocidad: 1,000 Mbps o 1 Gbps (gigabit por segundo).
+
+Contexto: Introducido a finales de la década de 1990, fue una mejora masiva que permitía velocidades mucho más altas, necesarias para transferencias de archivos grandes, multimedia y servidores de alto rendimiento.
+
+Características: Es la velocidad estándar para las redes cableadas domésticas y empresariales en la actualidad. Es cien veces más rápido que el Ethernet original y diez veces más rápido que Fast Ethernet. Utiliza cables de categoría 5e (Cat 5e) o superiores, lo que lo hace compatible con la infraestructura de cableado existente.
+
+
 
 b.
 El cableado de par trenzado no blindado (UTP) es el medio de red más común. El cableado UTP, que se termina con conectores RJ-45, se utiliza para interconectar hosts de red con dispositivos intermediarios de red, como switches y routers.
@@ -236,11 +260,25 @@ Datos extraidos de realizar ping hacia la puerta de enlace capturados usando Wir
 0040   77 61 62 63 64 65 66 67 68 69
 
 d. Direccion MAC del dispositivo: 
+
 ![alt text](macadress.png)
+
 Información del dispositivo:
+
 ![alt text](deviceinformation.png)
 
-e.
+e. Apartados c y d pero comunicandonos con otro PC:
+Datos:
+0000   b8 d6 f6 53 a5 a1 30 9c 23 07 ef 58 08 00 45 00
+0010   00 3c f7 ad 00 00 80 01 b5 b3 c0 a8 01 06 b5 5b
+0020   16 56 08 00 4c c2 00 01 00 99 61 62 63 64 65 66
+0030   67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76
+0040   77 61 62 63 64 65 66 67 68 69
+
+Direccion Mac:
+![alt text](macadress2.png)
+Informacion de la empresa: al ser la misma direccion MAC que en el apartado anterior la documentacion es la misma que en el apartado d.
+
 
 ### 4. Reflexiones finales y conclusiones
 
