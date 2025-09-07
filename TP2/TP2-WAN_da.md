@@ -205,7 +205,7 @@ El tamaño mínimo de trama de Ethernet es de 64 bytes, y el máximo es de 1518 
 
 ![alt text](tramadedatos.png)
 
-Las diferencias principales entre Ethernet, Fast Ethernet y Gigabit Ethernet radican en la velocidad de transmisión de datos, la cual ha evolucionado significativamente a lo largo del tiempo. 🚀
+Las diferencias principales entre Ethernet, Fast Ethernet y Gigabit Ethernet radican en la velocidad de transmisión de datos, la cual ha evolucionado significativamente a lo largo del tiempo. 
 
 Ethernet (10BASE-T)
 Velocidad: 10 Mbps (megabits por segundo).
