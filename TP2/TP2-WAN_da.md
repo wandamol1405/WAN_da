@@ -172,6 +172,76 @@ Relación con BER (Bit Error Rate):
 ![alt text](ber_ser.png)
 
 
+
+### 3. 
+
+
+a. 
+Ethernet es una de las dos tecnologías LAN utilizadas hoy en día, siendo la otra LAN inalámbricas (WLAN). Ethernet utiliza comunicaciones por cable, incluyendo pares trenzados, enlaces de fibra óptica y cables coaxiales.
+
+Ethernet funciona en la capa de enlace de datos y en la capa física. Es una familia de tecnologías de red definidas en los estándares IEEE 802.2 y 802.3. Ethernet soporta los siguientes anchos de banda de datos:
+
+10 Mbps
+100 Mbps
+1000 Mbps (1 Gbps)
+10.000 Mbps (10 Gbps)
+40,000 Mbps (40 Gbps)
+100,000 Mbps (100 Gbps)
+
+Los protocolos IEEE 802 LAN/MAN, incluyendo Ethernet, utilizan las dos subcapas independientes siguientes de la capa de enlace de datos para operar. Son el Control de enlace lógico (LLC) y el Control de acceso a medios (MAC)
+
+Subcapa LLC - Esta subcapa IEEE 802.2 se comunica entre el software de red en las capas superiores y el hardware del dispositivo en las capas inferiores. Coloca en la trama información que identifica qué protocolo de capa de red se utiliza para la trama. Esta información permite que múltiples protocolos de Capa 3, como IPv4 e IPv6, utilicen la misma interfaz de red y medios.
+
+Subcapa MAC - Esta subcapa se implementa en hardware y es responsable de la encapsulación de datos y control de acceso a medios. Proporciona direccionamiento de capa de enlace de datos y está integrado con varias tecnologías de capa física.
+
+Encapsulación de datos
+
+La encapsulación de datos IEEE 802.3 incluye lo siguiente:
+
+Trama de Ethernet - Esta es la estructura interna de la trama Ethernet.
+Direccionamiento Ethernet - la trama Ethernet incluye una dirección MAC de origen y destino para entregar la trama Ethernet de NIC Ethernet a NIC Ethernet en la misma LAN.
+Detección de errores Ethernet - La trama Ethernet incluye un avance de secuencia de verificación de trama (FCS) utilizado para la detección de errores.
+El tamaño mínimo de trama de Ethernet es de 64 bytes, y el máximo es de 1518 bytes. Esto incluye todos los bytes del campo de dirección MAC de destino a través del campo de secuencia de verificación de trama (FCS). El campo preámbulo no se incluye al describir el tamaño de una trama.
+
+![alt text](tramadedatos.png)
+
+
+b.
+El cableado de par trenzado no blindado (UTP) es el medio de red más común. El cableado UTP, que se termina con conectores RJ-45, se utiliza para interconectar hosts de red con dispositivos intermediarios de red, como switches y routers.
+
+En las redes LAN, el cable UTP consta de cuatro pares de hilos codificados por colores que están trenzados entre sí y recubiertos con un revestimiento de plástico flexible que los protege contra daños físicos menores. El trenzado de los hilos ayuda a proteger contra las interferencias de señales de otros hilos.
+
+Cuando se utiliza como medio de red, el cableado (UTP) consta de cuatro pares de hilos codificados por colores que están trenzados entre sí y recubiertos con un revestimiento de plástico flexible. Su tamaño pequeño puede ser una ventaja durante la instalación.
+
+Los cables UTP no utilizan blindaje para contrarrestar los efectos de la EMI y la RFI. En cambio, los diseñadores de cable han descubierto otras formas de limitar el efecto negativo del crosstalk:
+
+Anulación - Los diseñadores ahora emparejan los hilos en un circuito. Cuando dos hilos en un circuito eléctrico están cerca, los campos magnéticos son exactamente opuestos entre sí. Por lo tanto, los dos campos magnéticos se anulan y también anulan cualquier señal de EMI y RFI externa.
+
+Variando el número de vueltas por par de hilos - Para mejorar aún más el efecto de anulación de los pares de hilos del circuito, los diseñadores cambian el número de vueltas de cada par de hilos en un cable. Los cables UTP deben seguir especificaciones precisas que rigen cuántas vueltas o trenzas se permiten por metro (3,28 ft) de cable. 
+
+Los cables UTP dependen exclusivamente del efecto de anulación producido por los pares de hilos trenzados para limitar la degradación de la señal y proporcionar un autoblindaje eficaz de los pares de hilos en los medios de red.
+
+Según las diferentes situaciones, es posible que los cables UTP necesiten armarse según las diferentes convenciones para los cableados. Esto significa que los hilos individuales del cable deben conectarse en diferente orden para distintos grupos de pins en los conectores RJ-45.
+
+Cable directo de Ethernet - El tipo más común de cable de red. Por lo general, se utiliza para interconectar un host con un switch y un switch con un router.
+
+Cable cruzado Ethernet - El cable utilizado para interconectar dispositivos similares. Por ejemplo, para conectar un switch a un switch, un host a un host o un router a un router. Sin embargo, los cables de cruce ahora se consideran heredados, ya que las NIC utilizan cruzado de interfaz dependiente medio (Auto-MDIX) para detectar automáticamente el tipo de cable y realizar la conexión interna.
+
+c.
+Datos extraidos de realizar ping hacia la puerta de enlace capturados usando Wireshark:
+0000   30 9c 23 07 ef 58 b8 d6 f6 53 a5 a1 08 00 45 00
+0010   00 3c 63 e6 00 00 40 01 93 83 c0 a8 01 01 c0 a8
+0020   01 06 00 00 54 cc 00 01 00 8f 61 62 63 64 65 66
+0030   67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76
+0040   77 61 62 63 64 65 66 67 68 69
+
+d. Direccion MAC del dispositivo: 
+![alt text](macadress.png)
+Información del dispositivo:
+![alt text](deviceinformation.png)
+
+e.
+
 ### 4. Reflexiones finales y conclusiones
 
 El análisis con Wireshark mostró que la dirección MAC funciona como un identificador único de la tarjeta de red y, aunque no se transmite a través de Internet, sí es visible en la red local. Esto implica que otros equipos o el propio router pueden reconocer y seguir la actividad de un dispositivo, e incluso identificar su fabricante a partir del **OUI**. Por lo tanto, la privacidad del usuario dentro de una LAN es limitada: la MAC permite rastrear y asociar la presencia del dispositivo en el tiempo, lo que representa un punto crítico en la trazabilidad y en la exposición de datos en entornos compartidos.
