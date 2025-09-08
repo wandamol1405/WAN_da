@@ -171,64 +171,66 @@ Relación con BER (Bit Error Rate):
 
 ![alt text](ber_ser.png)
 
+Figura 2.2: Relación BER-SER
 
+---
 
-### 3. 
-
-
+### 3. WireShrak
 a. 
 Ethernet es una de las dos tecnologías LAN utilizadas hoy en día, siendo la otra LAN inalámbricas (WLAN). Ethernet utiliza comunicaciones por cable, incluyendo pares trenzados, enlaces de fibra óptica y cables coaxiales.
 
 Ethernet funciona en la capa de enlace de datos y en la capa física. Es una familia de tecnologías de red definidas en los estándares IEEE 802.2 y 802.3. Ethernet soporta los siguientes anchos de banda de datos:
 
-10 Mbps
-100 Mbps
-1000 Mbps (1 Gbps)
-10.000 Mbps (10 Gbps)
-40,000 Mbps (40 Gbps)
-100,000 Mbps (100 Gbps)
+- 10 Mbps
+- 100 Mbps
+- 1000 Mbps (1 Gbps)
+- 10.000 Mbps (10 Gbps)
+- 40,000 Mbps (40 Gbps)
+- 100,000 Mbps (100 Gbps)
 
 Los protocolos IEEE 802 LAN/MAN, incluyendo Ethernet, utilizan las dos subcapas independientes siguientes de la capa de enlace de datos para operar. Son el Control de enlace lógico (LLC) y el Control de acceso a medios (MAC)
 
-Subcapa LLC - Esta subcapa IEEE 802.2 se comunica entre el software de red en las capas superiores y el hardware del dispositivo en las capas inferiores. Coloca en la trama información que identifica qué protocolo de capa de red se utiliza para la trama. Esta información permite que múltiples protocolos de Capa 3, como IPv4 e IPv6, utilicen la misma interfaz de red y medios.
+- Subcapa LLC: Esta subcapa IEEE 802.2 se comunica entre el software de red en las capas superiores y el hardware del dispositivo en las capas inferiores. Coloca en la trama información que identifica qué protocolo de capa de red se utiliza para la trama. Esta información permite que múltiples protocolos de Capa 3, como IPv4 e IPv6, utilicen la misma interfaz de red y medios.
 
-Subcapa MAC - Esta subcapa se implementa en hardware y es responsable de la encapsulación de datos y control de acceso a medios. Proporciona direccionamiento de capa de enlace de datos y está integrado con varias tecnologías de capa física.
-
-Encapsulación de datos
+- Subcapa MAC: Esta subcapa se implementa en hardware y es responsable de la encapsulación de datos y control de acceso a medios. Proporciona direccionamiento de capa de enlace de datos y está integrado con varias tecnologías de capa física.
 
 La encapsulación de datos IEEE 802.3 incluye lo siguiente:
 
-Trama de Ethernet - Esta es la estructura interna de la trama Ethernet.
-Direccionamiento Ethernet - la trama Ethernet incluye una dirección MAC de origen y destino para entregar la trama Ethernet de NIC Ethernet a NIC Ethernet en la misma LAN.
-Detección de errores Ethernet - La trama Ethernet incluye un avance de secuencia de verificación de trama (FCS) utilizado para la detección de errores.
+- Trama de Ethernet - Esta es la estructura interna de la trama Ethernet.
+- Direccionamiento Ethernet - la trama Ethernet incluye una dirección MAC de origen y destino para entregar la trama - Ethernet de NIC Ethernet a NIC Ethernet en la misma LAN.
+- Detección de errores Ethernet - La trama Ethernet incluye un avance de secuencia de verificación de trama (FCS) utilizado para la detección de errores.
+
 El tamaño mínimo de trama de Ethernet es de 64 bytes, y el máximo es de 1518 bytes. Esto incluye todos los bytes del campo de dirección MAC de destino a través del campo de secuencia de verificación de trama (FCS). El campo preámbulo no se incluye al describir el tamaño de una trama.
 
 ![alt text](tramadedatos.png)
 
+Figura 3.1: Trama de datos. Fuente propia.
+
 Las diferencias principales entre Ethernet, Fast Ethernet y Gigabit Ethernet radican en la velocidad de transmisión de datos, la cual ha evolucionado significativamente a lo largo del tiempo. 
 
-Ethernet (10BASE-T)
-Velocidad: 10 Mbps (megabits por segundo).
+#### Ethernet (10BASE-T)
 
-Contexto: Fue la tecnología original y estándar para las redes de área local (LAN) a principios de la década de 1990.
+**Velocidad**: 10 Mbps (megabits por segundo).
 
-Características: Utiliza cables de par trenzado (Cat 3 o superior) y tiene una velocidad muy limitada para los estándares actuales. Aunque ya no se usa comúnmente para redes modernas, sentó las bases para los estándares posteriores.
+**Contexto**: Fue la tecnología original y estándar para las redes de área local (LAN) a principios de la década de 1990.
 
-Fast Ethernet (100BASE-T)
-Velocidad: 100 Mbps.
+**Características**: Utiliza cables de par trenzado (Cat 3 o superior) y tiene una velocidad muy limitada para los estándares actuales. Aunque ya no se usa comúnmente para redes modernas, sentó las bases para los estándares posteriores.
 
-Contexto: Surgió a mediados de la década de 1990 como una respuesta a la creciente necesidad de mayor ancho de banda en las redes.
+#### Fast Ethernet (100BASE-T)
 
-Características: Es diez veces más rápido que el Ethernet original y se convirtió en el estándar de facto para las redes de escritorio durante muchos años. Utiliza cables de par trenzado de categoría 5 (Cat 5) o superior.
+**Velocidad**: 100 Mbps.
 
-Gigabit Ethernet (1000BASE-T)
-Velocidad: 1,000 Mbps o 1 Gbps (gigabit por segundo).
+**Contexto**: Surgió a mediados de la década de 1990 como una respuesta a la creciente necesidad de mayor ancho de banda en las redes.
 
-Contexto: Introducido a finales de la década de 1990, fue una mejora masiva que permitía velocidades mucho más altas, necesarias para transferencias de archivos grandes, multimedia y servidores de alto rendimiento.
+**Características**: Es diez veces más rápido que el Ethernet original y se convirtió en el estándar de facto para las redes de escritorio durante muchos años. Utiliza cables de par trenzado de categoría 5 (Cat 5) o superior.
 
-Características: Es la velocidad estándar para las redes cableadas domésticas y empresariales en la actualidad. Es cien veces más rápido que el Ethernet original y diez veces más rápido que Fast Ethernet. Utiliza cables de categoría 5e (Cat 5e) o superiores, lo que lo hace compatible con la infraestructura de cableado existente.
+#### Gigabit Ethernet (1000BASE-T)
 
+**Velocidad**: 1,000 Mbps o 1 Gbps (gigabit por segundo).
 
+**Contexto**: Introducido a finales de la década de 1990, fue una mejora masiva que permitía velocidades mucho más altas, necesarias para transferencias de archivos grandes, multimedia y servidores de alto rendimiento.
+
+**Características**: Es la velocidad estándar para las redes cableadas domésticas y empresariales en la actualidad. Es cien veces más rápido que el Ethernet original y diez veces más rápido que Fast Ethernet. Utiliza cables de categoría 5e (Cat 5e) o superiores, lo que lo hace compatible con la infraestructura de cableado existente.
 
 b.
 El cableado de par trenzado no blindado (UTP) es el medio de red más común. El cableado UTP, que se termina con conectores RJ-45, se utiliza para interconectar hosts de red con dispositivos intermediarios de red, como switches y routers.
@@ -239,17 +241,17 @@ Cuando se utiliza como medio de red, el cableado (UTP) consta de cuatro pares de
 
 Los cables UTP no utilizan blindaje para contrarrestar los efectos de la EMI y la RFI. En cambio, los diseñadores de cable han descubierto otras formas de limitar el efecto negativo del crosstalk:
 
-Anulación - Los diseñadores ahora emparejan los hilos en un circuito. Cuando dos hilos en un circuito eléctrico están cerca, los campos magnéticos son exactamente opuestos entre sí. Por lo tanto, los dos campos magnéticos se anulan y también anulan cualquier señal de EMI y RFI externa.
+- *Anulación*:Los diseñadores ahora emparejan los hilos en un circuito. Cuando dos hilos en un circuito eléctrico están cerca, los campos magnéticos son exactamente opuestos entre sí. Por lo tanto, los dos campos magnéticos se anulan y también anulan cualquier señal de EMI y RFI externa.
 
-Variando el número de vueltas por par de hilos - Para mejorar aún más el efecto de anulación de los pares de hilos del circuito, los diseñadores cambian el número de vueltas de cada par de hilos en un cable. Los cables UTP deben seguir especificaciones precisas que rigen cuántas vueltas o trenzas se permiten por metro (3,28 ft) de cable. 
+- *Variando el número de vueltas por par de hilos*: Para mejorar aún más el efecto de anulación de los pares de hilos del circuito, los diseñadores cambian el número de vueltas de cada par de hilos en un cable. Los cables UTP deben seguir especificaciones precisas que rigen cuántas vueltas o trenzas se permiten por metro (3,28 ft) de cable. 
 
 Los cables UTP dependen exclusivamente del efecto de anulación producido por los pares de hilos trenzados para limitar la degradación de la señal y proporcionar un autoblindaje eficaz de los pares de hilos en los medios de red.
 
 Según las diferentes situaciones, es posible que los cables UTP necesiten armarse según las diferentes convenciones para los cableados. Esto significa que los hilos individuales del cable deben conectarse en diferente orden para distintos grupos de pins en los conectores RJ-45.
 
-Cable directo de Ethernet - El tipo más común de cable de red. Por lo general, se utiliza para interconectar un host con un switch y un switch con un router.
+- Cable directo de Ethernet:  El tipo más común de cable de red. Por lo general, se utiliza para interconectar un host con un switch y un switch con un router.
 
-Cable cruzado Ethernet - El cable utilizado para interconectar dispositivos similares. Por ejemplo, para conectar un switch a un switch, un host a un host o un router a un router. Sin embargo, los cables de cruce ahora se consideran heredados, ya que las NIC utilizan cruzado de interfaz dependiente medio (Auto-MDIX) para detectar automáticamente el tipo de cable y realizar la conexión interna.
+- Cable cruzado Ethernet: El cable utilizado para interconectar dispositivos similares. Por ejemplo, para conectar un switch a un switch, un host a un host o un router a un router. Sin embargo, los cables de cruce ahora se consideran heredados, ya que las NIC utilizan cruzado de interfaz dependiente medio (Auto-MDIX) para detectar automáticamente el tipo de cable y realizar la conexión interna.
 
 c.
 Datos extraidos de realizar ping hacia la puerta de enlace capturados usando Wireshark:
@@ -263,9 +265,13 @@ d. Direccion MAC del dispositivo:
 
 ![alt text](macadress.png)
 
+Figura 3.2: Dirección MAC. Fuente propia.
+
 Información del dispositivo:
 
 ![alt text](deviceinformation.png)
+
+Figura 3.3: Información del dispositivo. Fuente propia.
 
 e. Apartados c y d pero comunicandonos con otro PC:
 Datos:
@@ -276,9 +282,14 @@ Datos:
 0040   77 61 62 63 64 65 66 67 68 69
 
 Direccion Mac:
+
 ![alt text](macadress2.png)
+
+Figura 3.4: Dirección MAC. Fuente propia.
+
 Informacion de la empresa: al ser la misma direccion MAC que en el apartado anterior la documentacion es la misma que en el apartado d.
 
+---
 
 ### 4. Reflexiones finales y conclusiones
 
