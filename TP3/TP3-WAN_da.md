@@ -49,7 +49,7 @@ Santiago M. Henn
 
 En este trabajo se estudiará la evolución de los métodos de transmisión de datos y el rol de la IEEE en la estandarización de tecnologías de red. Se abordarán los estándares IEEE 802.3 (Ethernet) y IEEE 802.11 (Wi-Fi), identificando sus campos de aplicación y principales características. Además, se analizarán aspectos prácticos como la compatibilidad entre dispositivos y protocolos, la relación entre seguridad y versiones de Wi-Fi, y la clasificación de las versiones más recientes de estos protocolos (Wi-Fi 5, 6 y 7). Finalmente, se vincularán estos conceptos con otras tecnologías de comunicación, destacando la importancia de las capas de acceso en redes locales.
 
-## Introduccion
+## Introducción
 
 Las redes de datos constituyen hoy en día la base de la comunicación digital, permitiendo la interconexión de dispositivos, personas y servicios en todo el mundo. Sin embargo, ¿cómo logramos que sistemas tan diversos hablen un mismo “idioma” y mantengan la compatibilidad a lo largo del tiempo?  
 
@@ -105,7 +105,48 @@ Figura 1.2: [Evolución de los estándares Wi-Fi según IEEE 802.11](https://www
 
 ## Resultados
 
+### 3. Protocolos de comunicación y medios de transmisión
+a. En el siguiente cuadro se puede visualizar los protocolos inalambricos mas comunes y se detalla aquellos que estan estadarizados:
+| Protocolo    | ¿Está estandarizado? | Estándares|
+|--------------|----------------------|-----------|
+| Wi-Fi  | Si | IEEE 802.11 (última: IEEE 802.11ax, también llamado Wi-Fi 6/6E)|
+| Bluetooth | Si |IEEE 802.15.1 (mantiene base, pero ahora gestionado por Bluetooth SIG – última versión Bluetooth 5.4) |
+| ZigBee  | Si | IEEE 802.15.4 (última versión: ZigBee PRO 2023 basado en 802.15.4-2020) |
+| NFC | Si | ISO/IEC 18092, ISO/IEC 14443, ISO/IEC 15693 (últimas actualizaciones en ISO/IEC 18092:2019)|
+| LTE | Si | 3GPP Release 8 en adelante (última evolución: Release 17, LTE-Advanced Pro) |
+| GSM | Si | ETSI/3GPP GSM 900/1800 (última versión: 3GPP TS 45 series, Release 17 – aunque en desuso)|
+| 5G | Si | 3GPP Release 15 en adelante (última Release 17 en 2022, avanzando a Release 18/5G-Advanced) |
+| LoRa | Si | LoRaWAN está estandarizado por LoRa Alliance (última versión: LoRaWAN 1.0.4 de 2020 y 1.1.1 en 2023) |
+| NB-IoT | Si | 3GPP Release 13 en adelante (última Release 17) |
+| SigFox | No | Tecnología propietaria de SigFox, no estandarizada por IEEE/3GPP |
+| Z-Wave | Si | Estándar abierto gestionado por la Z-Wave Alliance bajo ITU-T G.9959 (última versión 2020)|
 
+b. La relación Data rate vs Distancia se realizo mediante el script contenido en [data_rate_vs_distance](data_rate_vs_distance.ipynb):
+
+![alt text](data_rate_vs_distance.png)
+
+Figura 3.1: Relación Data Rate vs Distancia. Fuente Propia
+
+De este gráfico se puede concluir lo siguiente:
+- **Relación inversa entre alzance y data rate**: Los protocolos de alto throughput, como Wi-Fi, LTE o 5G, ofrecen velocidades muy altas pero con un alcance limitado, al contrario de los protocolos de largo alcance, como LoRa, SigFox, NB-IoT o  GSM, que sacrifican velocidad para poder transmitir a mayores distancias.
+- **Protocolos de corto alcance y alta velocidad**: Wi-Fi y 5G son ideales para aplicaciones que requieren gran capacidad de transmisión como streaming, IoT de alto volumen, etc.
+- **Protocolos de corto alcance y baja velocidad**: NFC se utiliza en aplicaciones de proximidad como pagos móviles o de identificación, mientras que Bluetooth, ZigBee y Z-Wave cubren un rango de decenas de metros y son útiles en redes personales.
+- **Protocolos de largo alzance pero muy baja velocidad**: LoRa y SigFox llegan hasta decenas de km pero sus tasas son de apenas kbps o menos, por lo que su uso esta orientado a IoT masivo como sensores, telemetría, etc.
+- **Protocolos celulares**: Se observa la evolución tecnológica en esta área:
+  1. GSM tiene una baja velocidad pero largo alcance.
+  2. LTE tiene mayor data rate y mantiene una distancia de varios km.
+  3. 5G combina muy alta velocidad con cobertura urbana.
+
+c. La siguiente tabla muestra las caracteristicas d elos sigueintes medios de transmisión:
+| **Característica**                               | **UTP**                                                  | **Fibra Óptica**                                       | **Wi-Fi 802.11be (Wi-Fi 7)**                          | **Bluetooth 5.4**                                 | **5G**                                                     |
+| ------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------- |
+| **Ancho de banda**                               | Hasta 1–10 Gbps (Cat 5e/6/6a), hasta 40–100 Gbps (Cat 8) | Hasta 400 Gbps–1 Tbps                                  | Hasta 40 Gbps teóricos                                | Hasta 2 Mbps                                      | Hasta 10 Gbps (teórico, dependiendo de banda)              |
+| **Distancias**                                   | Hasta 100 m                                              | Hasta decenas de km (monomodo), \~2 km multimodo       | \~10–100 m                                            | \~1–100 m                                         | \~1–10 km (dependiendo de despliegue y frecuencia)         |
+| **Inmunidad a EMI / RFI**                        | Baja (susceptible a interferencias)                      | Muy alta (inmune, al ser luz)                          | Baja (susceptible a interferencias de radio)          | Baja (2.4 GHz congestionada)                      | Media/Alta (usa múltiples bandas y técnicas de mitigación) |
+| **Costos de medios / conectores / dispositivos** | Bajo (cable económico, conectores RJ-45 baratos)         | Alto (fibra y transceptores más costosos)              | Medio (APs y tarjetas Wi-Fi son accesibles)           | Muy bajo (chipsets baratos, integrado en móviles) | Alto (infraestructura costosa, dispositivos más caros)     |
+| **¿Disponible en Packet Tracer?**                | Sí                                                       | Sí (limitado, enlaces de fibra entre switches/routers) | Sí (APs inalámbricos 802.11ac/ax, aunque 11be aún no) | No                                                | No                                                         |
+
+---
 
 ## Fuentes consultadas
 
