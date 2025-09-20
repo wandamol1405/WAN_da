@@ -9,6 +9,9 @@ Cada carpeta corresponde a un trabajo práctico (TP) de la materia:
 TP1: Comunicaciones 101: Repaso de fundamentos esenciales e introducción a Packet Tracer
 
 TP2: Más conceptos fundamentales de capa física y capa de enlace de datos.
+
+TP3: Capas de Acceso en Redes Locales, Protocolos y Fundamentos.
+
 ...
 
 ## ⚙️ Requisitos

@@ -1,4 +1,4 @@
-# Más conceptos fundamentales de capa física y capa de enlace de datos.
+# Capas de Acceso en Redes Locales, Protocolos y Fundamentos
 
 **Nombres**
 
