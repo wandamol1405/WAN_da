@@ -105,6 +105,34 @@ Figura 1.2: [Evolución de los estándares Wi-Fi según IEEE 802.11](https://www
 
 ## Resultados
 
+### 1. Versión del protocolo 802.11 en redes abiertas de la Facultad
+
+Para este apartado se realizó la prueba de conexión a la red **UNC-LIBRE**.  
+Utilizando las herramientas de diagnóstico del sistema operativo Windows, se observó que el protocolo empleado es **Wi-Fi 5 (IEEE 802.11ac)**, operando en la **banda de 5 GHz**.  
+
+Este resultado indica que la Facultad utiliza un estándar ampliamente difundido, que permite velocidades teóricas de varios Gbit/s y un mejor desempeño en ambientes con alta densidad de usuarios en comparación con versiones previas como 802.11n (Wi-Fi 4).  
+
+El estándar IEEE 802.11 evoluciona en cada versión no solo en cuanto a tasas de datos y eficiencia espectral, sino también en mecanismos de seguridad.  
+
+En este caso, la red **UNC-LIBRE** presenta el tipo de seguridad: **Open** (red abierta, sin cifrado). Esto implica que la comunicación no cuenta con mecanismos de autenticación ni de cifrado de datos, lo cual expone la información transmitida a posibles ataques de interceptación.  
+
+Comparando con versiones más seguras:  
+- Un sistema **WPA2 (Wi-Fi Protected Access 2)** hubiera permitido el uso de cifrado AES-CCMP, protegiendo la confidencialidad del tráfico.  
+- Con **WPA3**, introducido junto a 802.11ax (Wi-Fi 6), se agregarían mejoras como autenticación más robusta (SAE) y protección frente a ataques de diccionario.  
+
+Por lo tanto, aunque la red utiliza un estándar moderno en la capa física (802.11ac), la falta de seguridad en la configuración (Open) reduce considerablemente la protección de los usuarios.  
+
+**Tabla comparativa de sistemas de seguridad en Wi-Fi:**
+
+| Sistema de seguridad | Año de introducción | Características principales | Vulnerabilidades / Limitaciones |
+|-----------------------|---------------------|-----------------------------|---------------------------------|
+| **WEP (Wired Equivalent Privacy)** | 1997 (IEEE 802.11 original) | Primer intento de seguridad en Wi-Fi, basado en RC4 y claves estáticas. | Muy inseguro, fácilmente vulnerable a ataques de descifrado; obsoleto. |
+| **WPA (Wi-Fi Protected Access)** | 2003 (transición) | Mejora sobre WEP con TKIP (Temporal Key Integrity Protocol). | Solo parche temporal; aún vulnerable a ataques modernos. |
+| **WPA2** | 2004 (IEEE 802.11i) | Introduce AES-CCMP, más robusto que TKIP; ampliamente adoptado en la industria. | Vulnerable a ataques como KRACK; depende de configuraciones seguras. |
+| **WPA3** | 2018 (Wi-Fi Alliance, compatible con IEEE 802.11ax) | Uso de SAE (Simultaneous Authentication of Equals), cifrado individualizado, mejor resistencia a ataques de diccionario. | Más seguro, pero algunos dispositivos antiguos no son compatibles. |
+
+Tabla 2: Evolución de los sistemas de seguridad en redes Wi-Fi según IEEE 802.11 y Wi-Fi Alliance
+
 ### 3. Protocolos de comunicación y medios de transmisión
 a. En el siguiente cuadro se puede visualizar los protocolos inalambricos mas comunes y se detalla aquellos que estan estadarizados:
 | Protocolo    | ¿Está estandarizado? | Estándares|
