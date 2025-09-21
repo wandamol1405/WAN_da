@@ -101,6 +101,7 @@ Cuando la red Wi-Fi está configurada para operar con una versión de protocolo 
 Tabla 1: Cuadro comparativo Wi-Fi 5 / Wi-Fi 6 / Wi-Fi 7
 
 ![Timeline Wi-Fi 5/6/6E/7](timeline_wifi.png)
+
 Figura 1.2: [Evolución de los estándares Wi-Fi según IEEE 802.11](https://www.arrow.com/es-mx/research-and-events/articles/the-evolution-of-wi-fi-technologies-wi-fi-7)
 
 ## Resultados
@@ -149,6 +150,8 @@ a. En el siguiente cuadro se puede visualizar los protocolos inalambricos mas co
 | SigFox | No | Tecnología propietaria de SigFox, no estandarizada por IEEE/3GPP |
 | Z-Wave | Si | Estándar abierto gestionado por la Z-Wave Alliance bajo ITU-T G.9959 (última versión 2020)|
 
+Tabla 3: Cuadro de protocolos inalámbricos y sus estándares
+
 b. La relación Data rate vs Distancia se realizo mediante el script contenido en [data_rate_vs_distance](data_rate_vs_distance.ipynb):
 
 ![alt text](data_rate_vs_distance.png)
@@ -165,7 +168,7 @@ De este gráfico se puede concluir lo siguiente:
   2. LTE tiene mayor data rate y mantiene una distancia de varios km.
   3. 5G combina muy alta velocidad con cobertura urbana.
 
-c. La siguiente tabla muestra las caracteristicas d elos sigueintes medios de transmisión:
+c. La siguiente tabla muestra las caracteristicas de los siguientes medios de transmisión:
 | **Característica**                               | **UTP**                                                  | **Fibra Óptica**                                       | **Wi-Fi 802.11be (Wi-Fi 7)**                          | **Bluetooth 5.4**                                 | **5G**                                                     |
 | ------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------- |
 | **Ancho de banda**                               | Hasta 1–10 Gbps (Cat 5e/6/6a), hasta 40–100 Gbps (Cat 8) | Hasta 400 Gbps–1 Tbps                                  | Hasta 40 Gbps teóricos                                | Hasta 2 Mbps                                      | Hasta 10 Gbps (teórico, dependiendo de banda)              |
@@ -174,7 +177,9 @@ c. La siguiente tabla muestra las caracteristicas d elos sigueintes medios de tr
 | **Costos de medios / conectores / dispositivos** | Bajo (cable económico, conectores RJ-45 baratos)         | Alto (fibra y transceptores más costosos)              | Medio (APs y tarjetas Wi-Fi son accesibles)           | Muy bajo (chipsets baratos, integrado en móviles) | Alto (infraestructura costosa, dispositivos más caros)     |
 | **¿Disponible en Packet Tracer?**                | Sí                                                       | Sí (limitado, enlaces de fibra entre switches/routers) | Sí (APs inalámbricos 802.11ac/ax, aunque 11be aún no) | No                                                | No                                                         |
 
----
+
+Tabla 4: Medios de transmisión
+
 
 ## Fuentes consultadas
 
