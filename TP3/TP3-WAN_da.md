@@ -109,19 +109,23 @@ Figura 1.2: [Evolución de los estándares Wi-Fi según IEEE 802.11](https://www
 ### 1. Versión del protocolo 802.11 en redes abiertas de la Facultad
 
 Para este apartado se realizó la prueba de conexión a la red **UNC-LIBRE**.  
-Utilizando las herramientas de diagnóstico del sistema operativo Windows, se observó que el protocolo empleado es **Wi-Fi 5 (IEEE 802.11ac)**, operando en la **banda de 5 GHz**.  
+A través de las herramientas de diagnóstico de Windows se determinó que la red utiliza el protocolo **Wi-Fi 6 (IEEE 802.11ax)**, operando en la **banda de 5 GHz**.  
 
-Este resultado indica que la Facultad utiliza un estándar ampliamente difundido, que permite velocidades teóricas de varios Gbit/s y un mejor desempeño en ambientes con alta densidad de usuarios en comparación con versiones previas como 802.11n (Wi-Fi 4).  
+Este resultado refleja que la infraestructura de la Facultad ya cuenta con un estándar moderno de comunicación inalámbrica. Wi-Fi 6 mejora la eficiencia en entornos con alta densidad de usuarios, aumenta la capacidad total de la red y soporta mayores velocidades respecto a versiones anteriores como Wi-Fi 5 (802.11ac) o Wi-Fi 4 (802.11n).
 
-El estándar IEEE 802.11 evoluciona en cada versión no solo en cuanto a tasas de datos y eficiencia espectral, sino también en mecanismos de seguridad.  
+![alt text](<unc-libre_info.jpg>)
 
-En este caso, la red **UNC-LIBRE** presenta el tipo de seguridad: **Open** (red abierta, sin cifrado). Esto implica que la comunicación no cuenta con mecanismos de autenticación ni de cifrado de datos, lo cual expone la información transmitida a posibles ataques de interceptación.  
+Figura 1.3: Información de la red WiFi "unc-libre" (Fuente Propia)
 
-Comparando con versiones más seguras:  
-- Un sistema **WPA2 (Wi-Fi Protected Access 2)** hubiera permitido el uso de cifrado AES-CCMP, protegiendo la confidencialidad del tráfico.  
-- Con **WPA3**, introducido junto a 802.11ax (Wi-Fi 6), se agregarían mejoras como autenticación más robusta (SAE) y protección frente a ataques de diccionario.  
+El estándar IEEE 802.11 incorpora en cada generación mejoras tanto en velocidad como en seguridad. Sin embargo, en este caso se observa que la red **UNC-LIBRE** utiliza tipo de seguridad **Abierto (sin cifrado)**.  
 
-Por lo tanto, aunque la red utiliza un estándar moderno en la capa física (802.11ac), la falta de seguridad en la configuración (Open) reduce considerablemente la protección de los usuarios.  
+Esto significa que las comunicaciones entre el dispositivo y el punto de acceso **no están protegidas mediante autenticación ni cifrado**, lo que expone al tráfico a riesgos de interceptación.  
+
+Comparando con otras opciones de seguridad:  
+- **WPA2** (introducido con 802.11i) emplea cifrado AES-CCMP, garantizando confidencialidad básica.  
+- **WPA3** (asociado a Wi-Fi 6 y posteriores) agrega mejoras como autenticación robusta mediante SAE y cifrado individualizado para cada sesión.  
+
+Por lo tanto, aunque la red **UNC-LIBRE** emplea un protocolo moderno en la capa física (802.11ax), el hecho de estar abierta reduce significativamente el nivel de protección para los usuarios.
 
 **Tabla comparativa de sistemas de seguridad en Wi-Fi:**
 
