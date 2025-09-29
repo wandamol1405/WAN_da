@@ -1,6 +1,6 @@
 # Capas de Acceso en Redes Locales, Protocolos y Fundamentos
 
-**Nombres**
+#### **Nombres**
 
 - _Francisco Gomez Neimann_
 
@@ -10,23 +10,23 @@
 
 - _Marcos Morán_
 
-**Nombre del grupo**
+#### **Nombre del grupo**
 
 WAN_da
 
-**Nombre del centro educativo o institución**
+#### **Nombre del centro educativo o institución**
 
 Facultad de Ciencias Exactas, Físicas y Naturales
 
-**Nombre del curso o materia**
+#### **Nombre del curso o materia**
 
 Comunicaciones de Datos
 
-**Profesores**
+#### **Profesores**
 
 Santiago M. Henn
 
-**Fecha**
+#### **Fecha**
 
 22 de septiembre de 2025
 
