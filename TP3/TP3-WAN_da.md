@@ -138,6 +138,43 @@ Por lo tanto, aunque la red **UNC-LIBRE** emplea un protocolo moderno en la capa
 
 Tabla 2: Evolución de los sistemas de seguridad en redes Wi-Fi según IEEE 802.11 y Wi-Fi Alliance
 
+### 2. Transmision por Fibra Óptica
+
+![Transmisiones en Fibra Optica](fibertypes.png)
+
+En la figura superior podemos observar los dos tipos de transmision por fibra optica: Fibra óptica monomodo (SMF) y Fibra multimodo (MMF).
+
+Fibra monomodo:
+
+SMF consta de un núcleo muy pequeño y utiliza tecnología láser cara para enviar un solo rayo de luz, como se muestra en la figura. SMF es popular en situaciones de larga distancia que abarcan cientos de kilómetros, como las requeridas en aplicaciones de telefonía de larga distancia y televisión por cable.
+
+Fibra multimodo:
+
+MMF consta de un núcleo más grande y utiliza emisores LED para enviar pulsos de luz. Específicamente, la luz de un LED ingresa a la fibra multimodo en diferentes ángulos, como se muestra en la figura. Se usa mucho en las redes LAN, debido a que pueden alimentarse mediante LED de bajo costo. Proporciona un ancho de banda de hasta 10 Gb/s a través de longitudes de enlace de hasta 550 metros.
+
+Una de las diferencias destacadas entre MMF y SMF es la cantidad de dispersión. La dispersión se refiere a la extensión de los pulsos de luz con el tiempo. El aumento de la dispersión significa una mayor pérdida de la intensidad de la señal. FMM tiene una mayor dispersión que SMF. Es por eso que MMF sólo puede viajar hasta 500 metros antes de la pérdida de señal. El SMF es mas costoso de implementar ya que requiere de laseres de alta precision.
+
+Ley de Snell y relación con la fibra óptica:
+
+La ley de Snell es una fórmula de la física que describe cómo un rayo de luz se dobla (se refracta) al pasar de un medio a otro con un índice de refracción diferente. Se expresa como $n_1 \cdot \sin(\theta_1) = n_2 \cdot \sin(\theta_2)$, donde n es el índice de refracción de cada medio, y θ es el ángulo de incidencia (θ₁) y el ángulo de refracción (θ₂).
+En la fibra óptica, la luz viaja por reflexión interna total.
+Esto ocurre porque:
+
+-El núcleo tiene un índice de refracción mayor que el revestimiento.
+
+-Si el ángulo de incidencia es mayor que el ángulo crítico, la luz queda confinada dentro del núcleo.
+
+En SMF solo se cumple para un ángulo muy preciso mientras que para MMF varios ángulos cumplen esta condición.
+
+Sobre la relación entre las conexiones inalámbricas y la fibra óptica:
+
+-Ambas transmiten información mediante ondas electromagnéticas.
+
+-En ambos casos se usan fenómenos físicos de propagación y reflexión.
+
+-Las conexiones inalámbricas (WiFi, 4G/5G) dependen muchas veces de enlaces de fibra en estaciones base y routers para conectarse al resto de la red.
+
+
 ### 3. Protocolos de comunicación y medios de transmisión
 a. En el siguiente cuadro se puede visualizar los protocolos inalambricos mas comunes y se detalla aquellos que estan estadarizados:
 | Protocolo    | ¿Está estandarizado? | Estándares|
