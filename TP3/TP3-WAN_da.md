@@ -138,42 +138,47 @@ Por lo tanto, aunque la red **UNC-LIBRE** emplea un protocolo moderno en la capa
 
 Tabla 2: Evolución de los sistemas de seguridad en redes Wi-Fi según IEEE 802.11 y Wi-Fi Alliance
 
+---
+
 ### 2. Transmision por Fibra Óptica
 
 ![Transmisiones en Fibra Optica](fibertypes.png)
 
+Figura 2.1: [Transmisión en Fibra Óptica](https://drive.google.com/file/d/1MqE1HY-9S3Wy2aEky6O5lY5DM-k_7IEc/view)
+
 En la figura superior podemos observar los dos tipos de transmision por fibra optica: Fibra óptica monomodo (SMF) y Fibra multimodo (MMF).
 
-Fibra monomodo:
+#### Fibra monomodo:
 
 SMF consta de un núcleo muy pequeño y utiliza tecnología láser cara para enviar un solo rayo de luz, como se muestra en la figura. SMF es popular en situaciones de larga distancia que abarcan cientos de kilómetros, como las requeridas en aplicaciones de telefonía de larga distancia y televisión por cable.
 
-Fibra multimodo:
+#### Fibra multimodo:
 
 MMF consta de un núcleo más grande y utiliza emisores LED para enviar pulsos de luz. Específicamente, la luz de un LED ingresa a la fibra multimodo en diferentes ángulos, como se muestra en la figura. Se usa mucho en las redes LAN, debido a que pueden alimentarse mediante LED de bajo costo. Proporciona un ancho de banda de hasta 10 Gb/s a través de longitudes de enlace de hasta 550 metros.
 
 Una de las diferencias destacadas entre MMF y SMF es la cantidad de dispersión. La dispersión se refiere a la extensión de los pulsos de luz con el tiempo. El aumento de la dispersión significa una mayor pérdida de la intensidad de la señal. FMM tiene una mayor dispersión que SMF. Es por eso que MMF sólo puede viajar hasta 500 metros antes de la pérdida de señal. El SMF es mas costoso de implementar ya que requiere de laseres de alta precision.
 
-Ley de Snell y relación con la fibra óptica:
+#### Ley de Snell y relación con la fibra óptica:
 
 La ley de Snell es una fórmula de la física que describe cómo un rayo de luz se dobla (se refracta) al pasar de un medio a otro con un índice de refracción diferente. Se expresa como $n_1 \cdot \sin(\theta_1) = n_2 \cdot \sin(\theta_2)$, donde n es el índice de refracción de cada medio, y θ es el ángulo de incidencia (θ₁) y el ángulo de refracción (θ₂).
 En la fibra óptica, la luz viaja por reflexión interna total.
 Esto ocurre porque:
 
--El núcleo tiene un índice de refracción mayor que el revestimiento.
+- El núcleo tiene un índice de refracción mayor que el revestimiento.
 
--Si el ángulo de incidencia es mayor que el ángulo crítico, la luz queda confinada dentro del núcleo.
+- Si el ángulo de incidencia es mayor que el ángulo crítico, la luz queda confinada dentro del núcleo.
 
 En SMF solo se cumple para un ángulo muy preciso mientras que para MMF varios ángulos cumplen esta condición.
 
 Sobre la relación entre las conexiones inalámbricas y la fibra óptica:
 
--Ambas transmiten información mediante ondas electromagnéticas.
+- Ambas transmiten información mediante ondas electromagnéticas.
 
--En ambos casos se usan fenómenos físicos de propagación y reflexión.
+- En ambos casos se usan fenómenos físicos de propagación y reflexión.
 
--Las conexiones inalámbricas (WiFi, 4G/5G) dependen muchas veces de enlaces de fibra en estaciones base y routers para conectarse al resto de la red.
+- Las conexiones inalámbricas (WiFi, 4G/5G) dependen muchas veces de enlaces de fibra en estaciones base y routers para conectarse al resto de la red.
 
+---
 
 ### 3. Protocolos de comunicación y medios de transmisión
 a. En el siguiente cuadro se puede visualizar los protocolos inalambricos mas comunes y se detalla aquellos que estan estadarizados:
@@ -221,23 +226,17 @@ c. La siguiente tabla muestra las caracteristicas de los siguientes medios de tr
 
 Tabla 4: Medios de transmisión
 
-
-## Fuentes consultadas
-
-- IEEE Standards Association – Project 802 Overview: https://standards.ieee.org/featured/ieee-802/  
-- IEEE Standards Association – Ethernet 50th Anniversary (Historia de IEEE 802.3): https://standards.ieee.org/beyond-standards/ethernet-50th-anniversary/  
-- IEEE Standards Association – The Evolution of Wi-Fi Technology and Standards: https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/  
-- IEEE 802.11be Project Page (Wi-Fi 7): https://standards.ieee.org/ieee/802.11be/7516/  
-- IEEE.org Página principal: https://www.ieee.org  
-
+---
 
 ### 4. Conectividad a Internet en vuelo: estado del arte, tecnologías y arquitectura de red
 
 ![alt text](red_avion.png)
 
-## a. Qué tecnologías permiten esto desde una perspectiva de comunicaciones de datos?
+Figura 4.1: [Red en un avion](https://drive.google.com/file/d/1MqE1HY-9S3Wy2aEky6O5lY5DM-k_7IEc/view)
 
-#### Satelital GEO (Ku/Ka)
+#### a. Qué tecnologías permiten esto desde una perspectiva de comunicaciones de datos?
+
+##### Satelital GEO (Ku/Ka)
 
 - Arquitectura: antena en el fuselaje o radomo dorsal conecta con satélites geoestacionarios orbitando a unos 35.786 km. Gateway terrestre conecta al core IP del proveedor.
 
@@ -245,7 +244,7 @@ Tabla 4: Medios de transmisión
 
 - Limitaciones: latencia alta por distancia (típicamente 500–650 ms RTT medidos a capa IP), fade por lluvia en Ka, handovers entre haces satelitales y gestión de capacidad por haz.
 
-#### Satelital LEO (Ku/Ka)
+#####  Satelital LEO (Ku/Ka)
 
 - Arquitectura: constelaciones en órbitas bajas (500 – 1.200 km) con antenas electrónicamente orientables; gateway terrestre integrado al core IP del proveedor.
 
@@ -256,7 +255,7 @@ Tabla 4: Medios de transmisión
 - Evidencia reciente: mediciones de 2025 reportan desempeño intercontinental de Starlink en vuelo
 
 
-#### Aire-tierra (ATG) y ATG-5G
+#####  Aire-tierra (ATG) y ATG-5G
 
 - Arquitectura: estaciones base en tierra apuntando al cielo; la aeronave actúa como UE “especial” con antenas sectoriales y backhaul al core móvil.
 
@@ -264,17 +263,17 @@ Tabla 4: Medios de transmisión
 
 - Evolución 2025: Gogo 5G ATG finalizando pruebas con promesa de rendimiento “similar a redes terrestres” para aviación ejecutiva/comercial regional. Latencia menor que satelital GEO y capacidad por celda sujeta a reutilización de espectro.
 
-#### Integración 3GPP NTN (Non-Terrestrial Networks)
+#####  Integración 3GPP NTN (Non-Terrestrial Networks)
 
 - Tendencia: convergencia 5G-NR (core 3GPP) con acceso satelital (NTN) para gestionar QoS/“network slicing” entre dominios de a bordo (pasajeros, IFE, IoT de cabina). La cabina agrega tráfico vía Wi-Fi y lo cursa por un modem 3GPP-NTN hacia el nodo de acceso satelital.
 
-#### Red de cabina (WLAN) y servidores IFE
+#####  Red de cabina (WLAN) y servidores IFE
 
 - Capa de acceso: Wi-Fi 802.11ac/ax con APs certificados aeronáuticamente (ARINC-763), controlados en clúster/“virtual controller”, SSIDs separados (público/crew/ops). 
 
 - Núcleo de cabina: Network Server System (NSS) y “head-end” IFE que almacenan/serving contenido local (VoD), gestionan portal cautivo y políticas; estándares ARINC 628 (interfaces de cabina) y ARINC 763 (NSS) definen filosofía e interconexiones.
 
-## b. Publicacion cientifico/tecnológica de hace menos de un año
+#### b. Publicacion cientifico/tecnológica de hace menos de un año
 
 **“A First Look at Starlink In-Flight Performance: An Intercontinental Empirical Study”** (Ago - 2025)
 
@@ -294,7 +293,7 @@ Tabla 4: Medios de transmisión
 
 - **Resumen:** Propone estrategias de despliegue y mejora de señal para 5G sobre LEO orientado a aeronaves, discutiendo continuidad de servicio y parámetros radio que impactan el plano de usuario y control.
 
-## c. ¿Cómo se divide el tráfico entre el contenido a bordo y el internet?
+#### c. ¿Cómo se divide el tráfico entre el contenido a bordo y el internet?
 
 En los sistemas de conectividad aérea actuales, el manejo del tráfico de datos se organiza en función de la diferencia fundamental entre los contenidos almacenados localmente en el avión, principalmente asociados al sistema de entretenimiento a bordo y el acceso a Internet provisto por enlaces satelitales o aire-tierra. Desde la perspectiva de las comunicaciones de datos, esta separación responde tanto a criterios técnicos como económicos. Por un lado, el contenido local, como películas, series o información de vuelo, se aloja en servidores instalados físicamente en el avión y se distribuye mediante la red inalámbrica de cabina a través de puntos de acceso Wi-Fi. De esta manera, el tráfico permanece confinado dentro del dominio de red interno y no requiere del uso del backhaul satelital o ATG, lo cual reduce la latencia y garantiza un ancho de banda estable para la reproducción de video o el acceso a otros servicios. En este contexto, la comunicación ocurre en niveles bajos de la arquitectura (enlace y red) sin necesidad de recurrir a recursos de la infraestructura global de Internet.
 
@@ -302,8 +301,16 @@ En contraste, el tráfico asociado a Internet, como el envío de correos electr�
 
 Esta organización de tráfico ilustra claramente cómo los principios de las comunicaciones de datos, multiplexación, control de congestión, enrutamiento y gestión de QoS, se aplican en un entorno complejo y restringido como es el de la conectividad en vuelo. Al mismo tiempo, evidencia la lógica económica subyacente: el acceso a contenidos locales se ofrece de manera gratuita, al no representar un costo marginal en términos de transmisión, mientras que el acceso a Internet se comercializa como un servicio adicional debido al consumo de recursos limitados y costosos en el enlace externo.
 
-## CONCLUSIÓN
+## Conclusión
 
 El recorrido realizado demuestra que los principios fundacionales de las comunicaciones de datos, modelo por capas, multiplexación, control de congestión, encaminamiento y QoS, siguen siendo el marco más eficaz para razonar sobre tecnologías muy diversas y contextos operativos exigentes. En el plano de acceso, la comparación entre IEEE 802.3 y 802.11 evidenció cómo la estandarización del IEEE garantiza interoperabilidad y evolución incremental sin perder compatibilidad; al mismo tiempo, el análisis práctico de **UNC-LIBRE** mostró con claridad que una PHY moderna (802.11ax) no compensa debilidades en la **capa de seguridad**: la ausencia de cifrado y autenticación expone el tráfico, lo que subraya la necesidad de políticas WPA3/Enterprise y buenas prácticas de configuración. En medios guiados, el contraste SMF/MMF reiteró el clásico compromiso entre costo, dispersión y alcance, y cómo las decisiones físicas (índices de refracción, ventanas espectrales, potencias ópticas) se traducen en métricas de red tangibles (BER, SNR, capacidad y distancia). El cuadro “data rate vs distancia” y la matriz de protocolos reforzaron además el trade-off estructural entre caudal y cobertura, ubicando a cada familia tecnológica en su “zona de mejor desempeño” según requerimientos de aplicación.
 
 Este marco se volvió especialmente útil al estudiar la conectividad en vuelo, donde una WLAN de cabina y servidores IFE conviven con dorsales satelitales GEO/LEO o enlaces aire-tierra. Allí, la latencia de backhaul y las políticas de QoS/segmentación determinan la experiencia: el entretenimiento local debe mantenerse “on-net” en la LAN de cabina, mientras el acceso a Internet, escaso y costoso, se administra con shaping, marcado y colas apropiadas. El estado del arte (LEO/NTN y la integración 3GPP) confirma una tendencia a convergencia arquitectónica: mismas funciones de control y garantía de servicio desde el dispositivo del pasajero hasta el core terrestre, habilitando clases de tráfico diferenciadas que alinean ingeniería y modelo de negocio. Como trabajo futuro, se recomienda instrumentar mediciones comparativas TCP/QUIC bajo RTT alto, emular en Packet Tracer la separación IFE/Internet con VLAN/VRF y DSCP, y evaluar el impacto de WPA3-Enterprise con EAP-TLS en entornos educativos abiertos. En suma, el hilo conductor del informe es que las decisiones de capa física y de enlace solo agregan valor cuando están respaldadas por políticas coherentes en red y aplicación; cuando esto ocurre, la heterogeneidad (cobre, fibra, Wi-Fi, 5G/NTN) se transforma en una plataforma robusta y segura al servicio de los requisitos de cada caso de uso.
+
+## Fuentes consultadas
+
+- IEEE Standards Association – Project 802 Overview: https://standards.ieee.org/featured/ieee-802/  
+- IEEE Standards Association – Ethernet 50th Anniversary (Historia de IEEE 802.3): https://standards.ieee.org/beyond-standards/ethernet-50th-anniversary/  
+- IEEE Standards Association – The Evolution of Wi-Fi Technology and Standards: https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/  
+- IEEE 802.11be Project Page (Wi-Fi 7): https://standards.ieee.org/ieee/802.11be/7516/  
+- IEEE.org Página principal: https://www.ieee.org  
