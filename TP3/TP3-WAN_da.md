@@ -229,3 +229,81 @@ Tabla 4: Medios de transmisión
 - IEEE Standards Association – The Evolution of Wi-Fi Technology and Standards: https://standards.ieee.org/beyond-standards/the-evolution-of-wi-fi-technology-and-standards/  
 - IEEE 802.11be Project Page (Wi-Fi 7): https://standards.ieee.org/ieee/802.11be/7516/  
 - IEEE.org Página principal: https://www.ieee.org  
+
+
+### 4. Conectividad a Internet en vuelo: estado del arte, tecnologías y arquitectura de red
+
+![alt text](red_avion.png)
+
+## a. Qué tecnologías permiten esto desde una perspectiva de comunicaciones de datos?
+
+#### Satelital GEO (Ku/Ka)
+
+- Arquitectura: antena en el fuselaje o radomo dorsal conecta con satélites geoestacionarios orbitando a unos 35.786 km. Gateway terrestre conecta al core IP del proveedor.
+
+- Características: gran cobertura oceánica/continental; anchos de banda de decenas a >100 Mbps por aeronave con sistemas modernos (Viasat/“ex-Inmarsat GX”).
+
+- Limitaciones: latencia alta por distancia (típicamente 500–650 ms RTT medidos a capa IP), fade por lluvia en Ka, handovers entre haces satelitales y gestión de capacidad por haz.
+
+#### Satelital LEO (Ku/Ka)
+
+- Arquitectura: constelaciones en órbitas bajas (500 – 1.200 km) con antenas electrónicamente orientables; gateway terrestre integrado al core IP del proveedor.
+
+- Características: latencia baja (20–80 ms RTT típicos en red madura) y mayor throughput pico por aeronave; handovers muy frecuentes entre satélites → exige control robusto de movilidad y planificación de rutas (routing/anycast).
+
+- Estado del arte: Starlink Aviation ya en operación comercial; primeras alianzas de Project Kuiper (Amazon) con aerolíneas, con despliegue a partir de 2027. 
+
+- Evidencia reciente: mediciones de 2025 reportan desempeño intercontinental de Starlink en vuelo
+
+
+#### Aire-tierra (ATG) y ATG-5G
+
+- Arquitectura: estaciones base en tierra apuntando al cielo; la aeronave actúa como UE “especial” con antenas sectoriales y backhaul al core móvil.
+
+- Alcance: cobertura regional (p. ej., Norteamérica).
+
+- Evolución 2025: Gogo 5G ATG finalizando pruebas con promesa de rendimiento “similar a redes terrestres” para aviación ejecutiva/comercial regional. Latencia menor que satelital GEO y capacidad por celda sujeta a reutilización de espectro.
+
+#### Integración 3GPP NTN (Non-Terrestrial Networks)
+
+- Tendencia: convergencia 5G-NR (core 3GPP) con acceso satelital (NTN) para gestionar QoS/“network slicing” entre dominios de a bordo (pasajeros, IFE, IoT de cabina). La cabina agrega tráfico vía Wi-Fi y lo cursa por un modem 3GPP-NTN hacia el nodo de acceso satelital.
+
+#### Red de cabina (WLAN) y servidores IFE
+
+- Capa de acceso: Wi-Fi 802.11ac/ax con APs certificados aeronáuticamente (ARINC-763), controlados en clúster/“virtual controller”, SSIDs separados (público/crew/ops). 
+
+- Núcleo de cabina: Network Server System (NSS) y “head-end” IFE que almacenan/serving contenido local (VoD), gestionan portal cautivo y políticas; estándares ARINC 628 (interfaces de cabina) y ARINC 763 (NSS) definen filosofía e interconexiones.
+
+## b. Publicacion cientifico/tecnológica de hace menos de un año
+
+**“A First Look at Starlink In-Flight Performance: An Intercontinental Empirical Study”** (Ago - 2025)
+
+- **Autores:** Muhammad Asad Ullah, Luca Borgianni
+
+- **Link:** https://www.researchgate.net/publication/394472846_A_First_Look_at_Starlink_In-Flight_Performance_An_Intercontinental_Empirical_Study
+
+- **Resumen:** Estudio con mediciones en vuelo (Baltic Sea y Pacífico) evaluando rendimiento y estabilidad de Starlink Aviation: tasas de descarga sostenidas de orden centenas de Mbps, latencia decenas de ms y análisis de handovers en trayectos largos. Relevante para dimensionar colas/buffers de TCP y estrategias de QoS en cabina.
+
+---
+
+**“Enabling Continuous 5G Connectivity in Aircraft through LEO Satellites”** (abr - 2025)
+
+- **Autores:** Raúl Parada, Victor Monzon Baeza, , Carlos Horcajo Fernández de Gamboa, Rocío Serrano Camacho, Carlos Monzo
+
+- **Link:** https://arxiv.org/html/2504.07262v1
+
+- **Resumen:** Propone estrategias de despliegue y mejora de señal para 5G sobre LEO orientado a aeronaves, discutiendo continuidad de servicio y parámetros radio que impactan el plano de usuario y control.
+
+## c. ¿Cómo se divide el tráfico entre el contenido a bordo y el internet?
+
+En los sistemas de conectividad aérea actuales, el manejo del tráfico de datos se organiza en función de la diferencia fundamental entre los contenidos almacenados localmente en el avión, principalmente asociados al sistema de entretenimiento a bordo y el acceso a Internet provisto por enlaces satelitales o aire-tierra. Desde la perspectiva de las comunicaciones de datos, esta separación responde tanto a criterios técnicos como económicos. Por un lado, el contenido local, como películas, series o información de vuelo, se aloja en servidores instalados físicamente en el avión y se distribuye mediante la red inalámbrica de cabina a través de puntos de acceso Wi-Fi. De esta manera, el tráfico permanece confinado dentro del dominio de red interno y no requiere del uso del backhaul satelital o ATG, lo cual reduce la latencia y garantiza un ancho de banda estable para la reproducción de video o el acceso a otros servicios. En este contexto, la comunicación ocurre en niveles bajos de la arquitectura (enlace y red) sin necesidad de recurrir a recursos de la infraestructura global de Internet.
+
+En contraste, el tráfico asociado a Internet, como el envío de correos electrónicos, la navegación web o el uso de aplicaciones interactivas, debe cursar hacia fuera del avión a través de un enlace WAN satelital o ATG. Este tipo de tráfico implica mayores costos de operación para la aerolínea, ya que requiere capacidad contratada a proveedores externos y depende de la calidad del enlace de retorno. Desde un punto de vista técnico, el tráfico de Internet presenta mayores desafíos, dado que está sujeto a latencias variables, más elevadas en enlaces GEO que en LEO o ATG, a posibles pérdidas de paquetes y a una gestión estricta del ancho de banda para garantizar la equidad entre pasajeros. Para lograr esta separación de flujos, la arquitectura de red de cabina implementa mecanismos de segmentación lógica, normalmente mediante VLAN o VRF, y políticas de calidad de servicio (QoS) que permiten priorizar determinados tipos de tráfico y evitar la interferencia entre las distintas clases de servicio. Así, el streaming de una película almacenada en el servidor de a bordo no compite por los mismos recursos de red que la transmisión de datos hacia Internet, lo que asegura una experiencia fluida en el entretenimiento local y un uso controlado del recurso limitado que constituye el backhaul externo.
+
+Esta organización de tráfico ilustra claramente cómo los principios de las comunicaciones de datos, multiplexación, control de congestión, enrutamiento y gestión de QoS, se aplican en un entorno complejo y restringido como es el de la conectividad en vuelo. Al mismo tiempo, evidencia la lógica económica subyacente: el acceso a contenidos locales se ofrece de manera gratuita, al no representar un costo marginal en términos de transmisión, mientras que el acceso a Internet se comercializa como un servicio adicional debido al consumo de recursos limitados y costosos en el enlace externo.
+
+## CONCLUSIÓN
+
+El recorrido realizado demuestra que los principios fundacionales de las comunicaciones de datos, modelo por capas, multiplexación, control de congestión, encaminamiento y QoS, siguen siendo el marco más eficaz para razonar sobre tecnologías muy diversas y contextos operativos exigentes. En el plano de acceso, la comparación entre IEEE 802.3 y 802.11 evidenció cómo la estandarización del IEEE garantiza interoperabilidad y evolución incremental sin perder compatibilidad; al mismo tiempo, el análisis práctico de **UNC-LIBRE** mostró con claridad que una PHY moderna (802.11ax) no compensa debilidades en la **capa de seguridad**: la ausencia de cifrado y autenticación expone el tráfico, lo que subraya la necesidad de políticas WPA3/Enterprise y buenas prácticas de configuración. En medios guiados, el contraste SMF/MMF reiteró el clásico compromiso entre costo, dispersión y alcance, y cómo las decisiones físicas (índices de refracción, ventanas espectrales, potencias ópticas) se traducen en métricas de red tangibles (BER, SNR, capacidad y distancia). El cuadro “data rate vs distancia” y la matriz de protocolos reforzaron además el trade-off estructural entre caudal y cobertura, ubicando a cada familia tecnológica en su “zona de mejor desempeño” según requerimientos de aplicación.
+
+Este marco se volvió especialmente útil al estudiar la conectividad en vuelo, donde una WLAN de cabina y servidores IFE conviven con dorsales satelitales GEO/LEO o enlaces aire-tierra. Allí, la latencia de backhaul y las políticas de QoS/segmentación determinan la experiencia: el entretenimiento local debe mantenerse “on-net” en la LAN de cabina, mientras el acceso a Internet, escaso y costoso, se administra con shaping, marcado y colas apropiadas. El estado del arte (LEO/NTN y la integración 3GPP) confirma una tendencia a convergencia arquitectónica: mismas funciones de control y garantía de servicio desde el dispositivo del pasajero hasta el core terrestre, habilitando clases de tráfico diferenciadas que alinean ingeniería y modelo de negocio. Como trabajo futuro, se recomienda instrumentar mediciones comparativas TCP/QUIC bajo RTT alto, emular en Packet Tracer la separación IFE/Internet con VLAN/VRF y DSCP, y evaluar el impacto de WPA3-Enterprise con EAP-TLS en entornos educativos abiertos. En suma, el hilo conductor del informe es que las decisiones de capa física y de enlace solo agregan valor cuando están respaldadas por políticas coherentes en red y aplicación; cuando esto ocurre, la heterogeneidad (cobre, fibra, Wi-Fi, 5G/NTN) se transforma en una plataforma robusta y segura al servicio de los requisitos de cada caso de uso.
