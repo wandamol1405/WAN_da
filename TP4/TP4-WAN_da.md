@@ -174,21 +174,29 @@ no shutdown
 exit
 ```
 
-
->**Captura 1:** 
-
 ![PC0](<interface_brief_PC1.png>)
 
+Figura 2.1: Asignación de IP a la PC0. Fuente propia. 
+
 ![PC1](<interface_brief_PC2.png>)
+
+Figura 2.2: Asignación de IP a la PC0. Fuente propia.
 
 ---
 #### Testeo de comunicación entre las computadoras usando ping
 
 ![PC0->PC1](<ping_PC0_PC1.png>)
 
+Figura 2.3: Ping de PC0 a PC1. Fuente propia.
+
 ![PC1->PC0](<ping_PC1_PC0.png>)
 
+Figura 2.4: Ping de PC1 a PC0. Fuente propia.
+
+---
+
 #### Creación de VLANs y asignación de puertos
+
 Se crearon tres VLANs y se asignaron nombres descriptivos:
 
 | VLAN | Nombre | Función |
@@ -209,17 +217,22 @@ name Management
 end
 ```
 
-> **Captura 2:** ejecutar `show vlan brief` y mostrar la lista de VLANs creadas (con sus nombres y puertos asociados).
+Se ejecutar `show vlan brief` y se muestra la lista de VLANs creadas (con sus nombres y puertos asociados).
 
 ![VLAN POR DEFECTO SW0](<vlan_por_defecto_en_SW1.png>)
 
+Figura 2.5: VLAN por defecto en SW0. Fuente propia.
+
 ![VLAN POR DEFECTO SW1](<vlan_por_defecto_en_SW2.png>)
 
-#### Por defecto, todos los puertos están asignados a la VLAN 1.
+Figura 2.6: VLAN por defecto en SW1. Fuente propia.
+
+Por defecto, todos los puertos están asignados a la VLAN 1.
+
 ---
 
 #### Asignación de puertos a VLANs
-**PC-A** fue conectada al puerto **F0/1** de **sw1**, y **PC-B** al puerto **F0/3** de **sw2**, ambos dentro de la VLAN 10.
+**PC-0** fue conectada al puerto **F0/1** de **sw1**, y **PC-1** al puerto **F0/3** de **sw2**, ambos dentro de la VLAN 10.
 
 **Comandos utilizados:**
 
@@ -229,12 +242,13 @@ switchport mode access
 switchport access vlan 10
 ```
 
-
->**Captura 3:**
-
 ![SW0VLB](vlan_brief_laboratorio_fa01_sw1.png)
 
+Figura 2.7: Asignacion de puerto F0/1. Fuente propia.
+
 ![SW1VLB](<vlan_brief_laboratorio_fa03_sw2.png>)
+
+Figura 2.8: Asignacion de puerto F0/3. Fuente propia.
 
 ---
 
@@ -252,44 +266,50 @@ no shutdown
 exit
 ```
 
-
->**Captura 4:** ejecutar `show ip interface brief` y mostrar que la IP de gestión ahora se encuentra en VLAN 99.
+Se ejecuta `show ip interface brief` para mostrar que la IP de gestión ahora se encuentra en VLAN 99.
 
 ### Switch 1
 ![VLBSW1FA01](vlan_brief_laboratorio_fa01_sw1.png)
 
+Figura 2.9: IP de gestión configurada en la VLAN 99. Fuente propia.
+
 ![VL99DOWN](interface_brief_vlan99_down_sw1.png)
+
+Figura 2.10: La interfaz VLAN 99 en estado "down" (no operativa). Fuente propia.
 
 ### Switch 2
 
 ![VLBSW2FA03](vlan_brief_laboratorio_fa03_sw2.png)
 
+Figura 2.11: IP de gestión configurada en la VLAN 99. Fuente propia.
+
 ![VL99DOWNSW2](interface_brief_vlan99_down_sw2.png)
+
+Figura 2.12: La interfaz VLAN 99 en estado "down" (no operativa). Fuente propia.
 
 ---
 
 #### Verificación de conectividad
 Desde **PC-A** y **PC-B** se realizaron pruebas de ping entre sí.
 
-> **Captura 6:** pings desde PC0 A PC1 y viceversa.
-
-PC0 a PC1:
+Pings desde PC0 A PC1 y viceversa.
 
 ![PINGPC0PC1](ping_PC1_PC2_fail.png)
 
-PC1 a PC0:
+Figura 2.13: Ping desde PC1 a PC2. Fuente propia.
 
 ![PINGPC1PC0](ping_PC2_PC1_fail.png)
 
+Figura 2.14: Ping desde PC2 a PC1. Fuente propia.
 
 ---
-## Punto 3
+### 3. Despliegue de una red LAN en un avión
 En este punto se configuró la red correspondiente al avión, compuesta por un router principal, un switch, tres computadoras (Turista, Business y Administración), un servidor de entretenimiento y un router adicional que simula el proveedor de Internet (ISP).  
 El objetivo fue segmentar el tráfico mediante VLANs, permitir el acceso a Internet únicamente a los pasajeros Business y a la Administración, y restringir a la clase Turista para que solo acceda al servidor local.
 
 ---
 
-### Conexión física de los dispositivos
+#### Conexión física de los dispositivos
 
 Se colocaron los siguientes equipos en el área de trabajo de Packet Tracer:
 
@@ -303,11 +323,13 @@ Se conectaron utilizando los cables apropiados:
 - **Cables directos** para conexiones Router–Switch y PC–Switch.  
 - **Cable cruzado** entre el Router del avión y el Router Internet.
 
-![Captura 1 - Topología completa con las conexiones realizadas]( )
+![Captura 1 - Topología completa con las conexiones realizadas](topologia_avion.png)
+
+Figura 3.1: Topología completa con las conexiones realizadas. Fuente propia.
 
 ---
 
-### Activación de interfaces
+#### Activación de interfaces
 
 En el Router del avión se activaron las interfaces FastEthernet 0/0 y FastEthernet 0/1:
 
@@ -333,13 +355,9 @@ no shutdown
 exit
 end
 ```
-
-
-![Captura 2 - CLI mostrando activación de interfaces en los routers]( )
-
 ---
 
-### Configuración de direcciones IP
+#### Configuración de direcciones IP
 
 Se configuraron las direcciones IP correspondientes a cada enlace de red, de acuerdo con el esquema de direccionamiento asignado.  
 El Router Avión utilizó subinterfaces para gestionar las VLANs Turista (10), Business (20) y Administración (99).
@@ -352,12 +370,9 @@ El Router Avión utilizó subinterfaces para gestionar las VLANs Turista (10), B
 | Router Avión | Fa0/1 | 200.0.0.1 | 255.255.255.252 |
 | Router Internet | Fa0/0 | 200.0.0.2 | 255.255.255.252 |
 
-![Captura 3 - Configuración IP en las interfaces del Router Avión]( )
-![Captura 4 - Configuración IP en el Router Internet]( )
-
 ---
 
-### Configuración del switch y VLANs
+#### Configuración del switch y VLANs
 
 En el switch se crearon tres VLANs con los nombres indicados:
 
@@ -392,11 +407,14 @@ switchport mode trunk
 exit
 ```
 
-![Captura 5 - VLANs creadas y puertos asignados]( )
+![Captura 5 - VLANs creadas y puertos asignados](configuraciones.png)
+
+Figura 3.2: VLANs creadas y puertos asignados. Fuente propia.
+
 
 ---
 
-### Configuración del servidor DHCP
+#### Configuración del servidor DHCP
 
 Se configuró el servicio DHCP en el Router Avión para que las PCs de cada VLAN obtuvieran una dirección IP automáticamente:
 
@@ -421,11 +439,9 @@ default-router 10.10.99.1
 dns-server 8.8.8.8
 ```
 
-![Captura 6 - Configuración DHCP en el router]( )
-
 ---
 
-### Configuración de NAT y ACLs
+#### Configuración de NAT y ACLs
 
 Se habilitó la traducción de direcciones (NAT) solo para la VLAN Business, permitiendo su salida a Internet a través del Router ISP.  
 También se creó una lista de control de acceso (ACL) para **bloquear el acceso a Internet de la VLAN Turista** pero permitir el acceso al servidor local.
@@ -444,11 +460,9 @@ interface fa0/0.10
 ip access-group 100 out
 ```
 
-![Captura 7 - Configuración de NAT y ACL en el router]( )
-
 ---
 
-### Configuración del servidor de entretenimiento
+#### Configuración del servidor de entretenimiento
 
 En el servidor se configuró una IP estática:
 - IP: 10.10.99.10  
@@ -457,11 +471,9 @@ En el servidor se configuró una IP estática:
 
 Se activó el servicio **HTTP** y se cargó una página HTML con contenido de prueba.
 
-![Captura 8 - Configuración del servidor HTTP y página cargada]( )
-
 ---
 
-### 🔁 Paso 8 – Pruebas de conectividad
+#### Pruebas de conectividad
 
 Desde las PCs se realizaron pruebas con los siguientes resultados esperados:
 
@@ -473,19 +485,17 @@ Desde las PCs se realizaron pruebas con los siguientes resultados esperados:
 | PC Business | Internet (8.8.8.8) | ✅ Acceso exitoso por NAT |
 | PC Admin | Todas las VLAN | ✅ Acceso total |
 
-![Captura 9 - Pings de prueba entre VLANs e Internet]( )
-![Captura 10 - Acceso HTTP desde PC Turista al servidor]( )
+![Pings de prueba entre VLANs e Internet](ping_business-internet.png)
 
----
+Figura 3.3: Ping de prueba entre Business a Internet. Fuente propia
 
-### 💾 Paso 9 – Guardado de configuración
+![Ping de prueba entre turista a Internet](ping_turista-internet.png)
 
-Finalmente, se guardó la configuración permanente en los routers con el comando:
-```text
-write memory
-```
+Figura 3.4: Ping de prueba entre Turista a Internet. Fuente propia
 
-![Captura 11 - Confirmación de guardado de la configuración en el router]( )
+![Acceso HTTP desde PC Turista al servidor](coneccion_turista-internet.png)
+
+Figura 3.5: Configuración del servidor HTTP y página cargada. Fuente propia
 
 ---
 
