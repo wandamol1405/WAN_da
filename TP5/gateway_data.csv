@@ -1,0 +1,13 @@
+timestamp,topic,payload
+2025-11-18T01:19:23.252975,lan/sala2/sensor/temp,19.92
+2025-11-18T01:19:23.254107,lan/sala1/sensor/temp,19.23
+2025-11-18T01:19:23.786067,lan/sala1/sensor/hum,61.21
+2025-11-18T01:19:25.201715,lan/sala1/sensor/hum,40.95
+2025-11-18T01:19:25.448932,lan/sala2/sensor/temp,23.94
+2025-11-18T01:19:25.449836,lan/sala1/sensor/temp,18.49
+2025-11-18T01:19:27.184560,lan/sala1/sensor/hum,38.41
+2025-11-18T01:19:27.431231,lan/sala2/sensor/temp,22.69
+2025-11-18T01:19:27.432106,lan/sala1/sensor/temp,21.47
+2025-11-18T01:19:29.186966,lan/sala1/sensor/hum,54.7
+2025-11-18T01:19:29.434072,lan/sala2/sensor/temp,23.62
+2025-11-18T01:19:29.436487,lan/sala1/sensor/temp,24.82
