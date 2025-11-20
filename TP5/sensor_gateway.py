@@ -20,7 +20,6 @@ import threading
 import time
 import random
 import csv
-import signal
 from datetime import datetime
 
 import paho.mqtt.client as paho

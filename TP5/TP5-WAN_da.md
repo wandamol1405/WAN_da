@@ -214,3 +214,14 @@ Depender de un broker central implica:
 - **Escalabilidad modular:** permite agregar nodos sin reconfigurar el sistema.
 
 En síntesis, la centralización simplifica la arquitectura, pero aumenta la dependencia y los riesgos.
+
+## Conclusiones
+En este trabajo hemos explorado el protocolo MQTT y el patrón de diseño Publish/Subscribe, implementando una simulación de red local con múltiples clientes y un broker central. A través de la configuración de tópicos jerárquicos y la implementación de mecanismos de comunicación punto a punto y broadcasting, hemos demostrado la flexibilidad y escalabilidad que ofrece este modelo frente a las arquitecturas tradicionales cliente-servidor. La utilización de un broker cloud-based como HiveMQ Cloud facilitó la gestión y el despliegue de la red, aunque también evidenció las limitaciones inherentes a la dependencia de un punto centralizado. En definitiva, este trabajo nos permitió comprender las ventajas y desafíos del modelo Pub/Sub en el contexto de redes locales e IoT, sentando las bases para futuras exploraciones en este campo. 
+
+### Logros Principales
+
+1. **Validación del Patrón Pub/Sub:** Se demostró el desacoplamiento exitoso entre los clientes. Los emisores y receptores (sensores y gateway) interactuaron de forma independiente a través del broker (HiveMQ Cloud) y de una jerarquía de tópicos bien definida. Esto se verificó con la comunicación punto a punto, la difusión por broadcasting (comandos start/stop en lan/commands) y la recolección centralizada de datos de sensores (lan/+/sensor/#).
+
+2. **Eficiencia y Flexibilidad:** El uso de MQTT sobre TCP garantizó la entrega de mensajes ligeros y la correcta implementación de QoS 1 para equilibrar fiabilidad y bajo consumo de recursos. La jerarquía de tópicos demostró ser un mecanismo eficiente para la organización lógica y el direccionamiento selectivo de mensajes en la simulación.
+
+3. **Análisis de Arquitectura:** El ejercicio de reflexión confirmó que, si bien el modelo Pub/Sub de MQTT ofrece escalabilidad natural y flexibilidad superior al modelo Cliente-Servidor tradicional, introduce una dependencia crítica en el broker central. Esta dependencia es un punto único de falla y un potencial cuello de botella de tráfico, lo que subraya la necesidad de implementar soluciones de alta disponibilidad y redundancia en escenarios de producción.
